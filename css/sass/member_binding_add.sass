@@ -1,0 +1,145 @@
+@import "layout/_layout.sass"
+
+.no_pad
+	padding-left: 0 !important
+	padding-right: 0 !important
+.border_right
+	border-right: 1px dotted #e8f0ed
+.border_bottom_min
+	border-bottom: 1px dotted #e8f0ed
+.border_bottom
+	border-bottom: 4px solid #eff5f3
+.col_2plus //col-2.5
+	width: 100%/12*2.5
+
+.m_top
+	margin-top: 15px	
+.tab_noborder
+	border: none
+	>li.active
+		position: relative
+		&:after
+			content: ''
+			display: block
+			height: 1px
+			width: 55px
+			background-color: $btn_green
+			position: absolute
+			bottom: 8px
+			left: 8px
+		a, a:focus, a:hover
+			border: none
+			color: $btn_green
+	>li
+		a, a:focus, a:hover
+			border: none
+
+.clearfix:after
+  visibility: hidden
+  display: block
+  font-size: 0
+  content: " "
+  clear: both
+  height: 0
+
+.member_binding_add_banner
+	background-color: #3b7d60
+
+
+.member_binding_add
+	margin-top: -50px;
+	min-height: 375px
+	input
+		width: 100%
+		border: none
+
+
+.list
+	letter-spacing: 0.6px
+	text-align:left
+	color: #363a39
+	padding-left: 0
+	padding-right: 0
+
+	li
+		border-bottom: 1px solid #e7eeed
+		margin-bottom: 10px
+
+
+	li 
+		.icon, .title, .value
+			padding-top: 12px
+			padding-bottom: 12px
+			font-size: $font_size_base
+			line-height: 20px
+			float: left
+	.icon
+		padding-left: 12px
+		padding-right: 12px
+		text-align: center
+		img
+			width: 18px
+			height: 18px
+		margin-right: 12px;
+	.title
+		padding-left: 0
+		padding-right: 0
+	.value
+		padding-left: 12px
+		// position: relative
+		~.error
+			padding-top: 3px
+			padding-bottom: 0px
+			font-size: $font_size_base
+			line-height: 12px
+			color: $btn_red
+			position: absolute
+			left: 25px
+			bottom: -15px
+.choose_group
+	min-width: 25%
+	display: block
+	text-align: right
+	// padding-right: 25px
+	button
+		width: 100%
+		padding-top: 12px
+		padding-bottom: 12px
+		line-height: 20px	
+		div
+			color: #7d8382
+	// 	border-radius: 12.5px
+
+// for choose bank
+.choose_bank, .choose_city
+	.choose_dialog
+		margin: 0
+		height: 100vh
+		.choose_content
+			width: 100vw
+			height: 100vh
+			background-color: #fff
+
+			.choose_header
+				background-color: #ebf3f0
+				button
+					img
+						width: 11px
+			.choose_body
+				background-color: #fff
+	.list
+		li
+			padding-top: 15px
+			padding-bottom: 15px
+	.button_group
+		padding-top: 15px
+
+.choose_city_group
+	padding-right: 0
+
+
+// for choose city
+.choose_city
+	.nav-tabs li a:focus, .nav-tabs li a:hover
+		background-color: #fff
+		// border-bottom: 1px solid #ddd

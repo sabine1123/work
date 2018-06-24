@@ -1,0 +1,268 @@
+@charset "UTF-8";
+.btn {
+  background-image: none;
+  background-repeat: no-repeat;
+  border: none;
+  text-shadow: none;
+  border-radius: 3px; }
+
+.btn_fill_green {
+  background-color: #26a97a;
+  color: #fff; }
+  .btn_fill_green:hover, .btn_fill_green:focus, .btn_fill_green:active {
+    color: #fff; }
+
+.btn_fill_red {
+  background-color: #f16c6c;
+  color: #fff; }
+  .btn_fill_red:hover, .btn_fill_red:focus, .btn_fill_red:active {
+    color: #fff; }
+
+.btn_empty_green {
+  border: 1px solid #26a97a;
+  color: #26a97a;
+  background-color: #fff; }
+  .btn_empty_green:hover, .btn_empty_green:focus, .btn_empty_green:active {
+    color: #26a97a; }
+
+.btn_empty_gray {
+  border: 1px solid #c2c7c3;
+  color: #c8d0cf;
+  background-color: #fff; }
+  .btn_empty_gray:hover, .btn_empty_gray:focus, .btn_empty_gray:active {
+    color: #c8d0cf; }
+
+.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child,
+.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child,
+.btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
+  border-radius: 3px; }
+
+html {
+  font-size: 100%; }
+
+body {
+  font-family: "微軟雅黑體", "微软雅黑体", "微軟正黑體", "微软正黑体", "Arial"; }
+
+h1, h2, h3 {
+  margin: 0; }
+
+button {
+  outline: none;
+  border: none;
+  background-color: transparent; }
+
+a {
+  color: inherit; }
+  a:focus, a:hover {
+    outline: none;
+    color: inherit;
+    text-decoration: none; }
+
+.close {
+  text-shadow: 0 0; }
+
+.mask {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 300;
+  position: fixed;
+  top: 0; }
+
+/*2017/10/16合并后，要更改的css*/
+section .container-fluid, section .container {
+  margin-top: 48px;
+  margin-bottom: 50px; }
+
+.mem_header .pull-left {
+  margin-top: 16px;
+  margin-left: 13px; }
+  .mem_header .pull-left img {
+    height: 18px; }
+
+.mem_header .brand_middle {
+  color: #b5ead7;
+  font-size: 0.9375rem; }
+
+/**/
+.withdraw {
+  background-color: #ffffff;
+  font-size: 0.875rem;
+  /*共用*/ }
+  .withdraw .container-fluid {
+    margin-bottom: 0; }
+  .withdraw .header {
+    margin-top: 56px;
+    margin-bottom: 10px; }
+    .withdraw .header img {
+      width: 100%; }
+  .withdraw .meter {
+    background: url(../img/member/banner/images_03.jpg) no-repeat center;
+    background-size: cover;
+    height: 122px;
+    position: relative; }
+  .withdraw .withdraw_title {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%, 50%);
+    -ms-transform: translate(-50%, 50%);
+    transform: translate(-50%, 50%);
+    bottom: 50%;
+    color: #88c4ae; }
+    .withdraw .withdraw_title li.active {
+      color: #ffffff; }
+      .withdraw .withdraw_title li.active a {
+        font-size: 1rem; }
+    .withdraw .withdraw_title li:active {
+      color: #ffffff; }
+      .withdraw .withdraw_title li:active a {
+        font-size: 1rem; }
+  .withdraw .balance_padding {
+    padding: 28px 0; }
+  .withdraw .balance_title {
+    color: #ffdd67; }
+    .withdraw .balance_title .balance {
+      color: #ffffff; }
+    .withdraw .balance_title .balance_num span:nth-of-type(1) {
+      color: #ffdd67;
+      font-size: 1.5rem; }
+    .withdraw .balance_title .balance_num span:nth-of-type(2) {
+      color: #97d3c3;
+      font-size: 1rem; }
+  .withdraw li {
+    margin-bottom: -1px; }
+    .withdraw li.active a {
+      border-bottom-color: #fff; }
+  .withdraw .withdraw_money {
+    margin-bottom: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #c8cecd; }
+    .withdraw .withdraw_money img {
+      height: 20px; }
+    .withdraw .withdraw_money input {
+      width: 70%;
+      border: 0; }
+  .withdraw .withdraw_content {
+    min-height: 375px;
+    background-color: #ffffff; }
+    .withdraw .withdraw_content .container {
+      margin-top: 0;
+      margin-bottom: 0; }
+    .withdraw .withdraw_content span {
+      color: #15a693;
+      font-size: 1.125rem; }
+    .withdraw .withdraw_content .choose_balance_button_title {
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+      color: #545857; }
+      .withdraw .withdraw_content .choose_balance_button_title span {
+        color: #afb2b1;
+        font-size: 0.875rem; }
+    .withdraw .withdraw_content .balance {
+      margin-top: 10px;
+      margin-bottom: 0;
+      padding-bottom: 10px;
+      border-bottom: 1px dashed #c8cecd; }
+    .withdraw .withdraw_content .withdraw_num {
+      color: inherit;
+      font-size: 0.875rem;
+      margin-left: 8px; }
+    .withdraw .withdraw_content .SelectBank {
+      margin-top: 18px;
+      margin-bottom: 12px; }
+      .withdraw .withdraw_content .SelectBank span {
+        color: inherit;
+        font-size: inherit; }
+    .withdraw .withdraw_content .withdraw_footer .btn_fill_green {
+      margin-top: 28px;
+      margin-bottom: 28px;
+      background-color: #26a97a;
+      color: #fff;
+      font-size: 0.875rem;
+      line-height: 30px; }
+  .withdraw .balance_footer .row ul {
+    text-align: center;
+    margin: 15px auto;
+    font-size: 1rem; }
+    .withdraw .balance_footer .row ul li {
+      padding: 12px 0;
+      border-bottom: 1px solid #f0f4f3; }
+      .withdraw .balance_footer .row ul li:first-child {
+        border-top: 1px solid #f0f4f3; }
+    .withdraw .balance_footer .row ul .title {
+      width: 35px;
+      display: inline-block;
+      text-align: left;
+      margin-right: 30px; }
+  .withdraw .balance_footer .row .btn {
+    width: 93.75%;
+    display: block;
+    margin: auto; }
+  .withdraw .banner .swiper-wrapper {
+    padding-left: 10px; }
+  .withdraw .banner .swiper-slide {
+    min-height: 100px;
+    width: 73.125%;
+    max-width: 280px;
+    border: solid 1px #ced2ce;
+    border-radius: 4px;
+    padding: 6px 3.75% 15px; }
+    .withdraw .banner .swiper-slide.active {
+      border: solid 1px #008666; }
+    .withdraw .banner .swiper-slide .header {
+      padding: 0;
+      margin: 0; }
+      .withdraw .banner .swiper-slide .header img {
+        width: 19.23077%; }
+      .withdraw .banner .swiper-slide .header .title {
+        font-size: 1.125rem;
+        letter-spacing: 1px;
+        color: #4a504f;
+        margin-left: 2.99145%; }
+      .withdraw .banner .swiper-slide .header button {
+        border: solid 1px #ccd4d1;
+        border-radius: 2px;
+        padding: 3px 5px;
+        position: absolute;
+        right: 13px;
+        top: 13px; }
+    .withdraw .banner .swiper-slide .middle {
+      padding-left: 15px; }
+      .withdraw .banner .swiper-slide .middle span {
+        display: block;
+        color: inherit; }
+      .withdraw .banner .swiper-slide .middle .title {
+        font-size: 1.125rem;
+        letter-spacing: 3.5px;
+        color: #6a716f;
+        margin-top: 14px; }
+      .withdraw .banner .swiper-slide .middle .content {
+        font-size: 0.875rem; }
+      .withdraw .banner .swiper-slide .middle .line {
+        width: 31.62393%;
+        height: 1px;
+        background-color: #ccd4d1;
+        margin-top: 3px;
+        margin-bottom: 3px; }
+    .withdraw .banner .swiper-slide .footer {
+      font-size: 0.875rem;
+      letter-spacing: 1px;
+      text-align: right;
+      margin-top: 7px; }
+  .withdraw .banner .swiper-pagination {
+    width: auto;
+    right: 14px;
+    bottom: 9px;
+    left: auto; }
+    .withdraw .banner .swiper-pagination .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      background-color: #fff;
+      opacity: 1; }
+    .withdraw .banner .swiper-pagination .swiper-pagination-bullet-active {
+      background-color: #ffde00; }
+
+/**/

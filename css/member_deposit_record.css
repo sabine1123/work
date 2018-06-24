@@ -1,0 +1,243 @@
+@charset "UTF-8";
+.btn {
+  background-image: none;
+  background-repeat: no-repeat;
+  border: none;
+  text-shadow: none;
+  border-radius: 3px; }
+
+.btn_fill_green {
+  background-color: #26a97a;
+  color: #fff; }
+  .btn_fill_green:hover, .btn_fill_green:focus, .btn_fill_green:active {
+    color: #fff; }
+
+.btn_fill_red {
+  background-color: #f16c6c;
+  color: #fff; }
+  .btn_fill_red:hover, .btn_fill_red:focus, .btn_fill_red:active {
+    color: #fff; }
+
+.btn_empty_green {
+  border: 1px solid #26a97a;
+  color: #26a97a;
+  background-color: #fff; }
+  .btn_empty_green:hover, .btn_empty_green:focus, .btn_empty_green:active {
+    color: #26a97a; }
+
+.btn_empty_gray {
+  border: 1px solid #c2c7c3;
+  color: #c8d0cf;
+  background-color: #fff; }
+  .btn_empty_gray:hover, .btn_empty_gray:focus, .btn_empty_gray:active {
+    color: #c8d0cf; }
+
+.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child,
+.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child,
+.btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
+  border-radius: 3px; }
+
+html {
+  font-size: 100%; }
+
+body {
+  font-family: "微軟雅黑體", "微软雅黑体", "微軟正黑體", "微软正黑体", "Arial"; }
+
+h1, h2, h3 {
+  margin: 0; }
+
+button {
+  outline: none;
+  border: none;
+  background-color: transparent; }
+
+a {
+  color: inherit; }
+  a:focus, a:hover {
+    outline: none;
+    color: inherit;
+    text-decoration: none; }
+
+.close {
+  text-shadow: 0 0; }
+
+.mask {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 300;
+  position: fixed;
+  top: 0; }
+
+/*2017/10/16合并后，要更改的css*/
+section .container-fluid, section .container {
+  margin-top: 48px;
+  margin-bottom: 50px; }
+
+.mem_header .pull-left {
+  margin-top: 16px;
+  margin-left: 13px; }
+  .mem_header .pull-left img {
+    height: 18px; }
+
+.mem_header .brand_middle {
+  color: #b5ead7;
+  font-size: 0.9375rem; }
+
+.member_deposit_record .deposit_record_table {
+  font-size: 0.875rem; }
+  .member_deposit_record .deposit_record_table .container {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0; }
+  .member_deposit_record .deposit_record_table table {
+    border-bottom: 1px solid #e6ebe9; }
+  .member_deposit_record .deposit_record_table tbody tr {
+    color: #404443; }
+    .member_deposit_record .deposit_record_table tbody tr td {
+      vertical-align: middle;
+      border-top: 1px solid #e6ebe9; }
+    .member_deposit_record .deposit_record_table tbody tr:nth-of-type(1) td {
+      border: 0; }
+    .member_deposit_record .deposit_record_table tbody tr span {
+      color: #939897; }
+  .member_deposit_record .deposit_record_table tbody .time {
+    color: #959a99; }
+  .member_deposit_record .deposit_record_table tbody .going .status {
+    color: #ea9f1d; }
+  .member_deposit_record .deposit_record_table tbody .successful .status {
+    color: #5bac13; }
+  .member_deposit_record .deposit_record_table tbody .fail .status {
+    color: #e95d8f; }
+  .member_deposit_record .deposit_record_table tbody .slidedown_row.active {
+    display: table-row; }
+  .member_deposit_record .deposit_record_table tbody .slidedown_row button {
+    padding: 8px;
+    background-color: #941616;
+    color: #ffffff; }
+  .member_deposit_record .deposit_record_table tbody .slidedown_row {
+    display: none; }
+    .member_deposit_record .deposit_record_table tbody .slidedown_row .title {
+      color: #3e4341; }
+    .member_deposit_record .deposit_record_table tbody .slidedown_row .content {
+      color: #7f8784; }
+  .member_deposit_record .deposit_record_table thead {
+    color: #ffffff; }
+    .member_deposit_record .deposit_record_table thead tr {
+      background-color: #116f4d; }
+    .member_deposit_record .deposit_record_table thead th {
+      border: 0;
+      text-align: center;
+      font-weight: normal; }
+  .member_deposit_record .deposit_record_table .more {
+    color: #afafae; }
+
+.border_right {
+  border-right: 1px dotted #e8f0ed; }
+
+.border_bottom_min {
+  border-bottom: 1px dotted #e8f0ed; }
+
+.border_bottom {
+  border-bottom: 4px solid #eff5f3; }
+
+.banner {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#137665), to(#287d5e));
+  background-image: -webkit-linear-gradient(bottom, #137665, #287d5e);
+  background-image: -o-linear-gradient(bottom, #137665, #287d5e);
+  background-image: linear-gradient(to top, #137665, #287d5e);
+  padding-bottom: 25px; }
+  .banner img {
+    margin-bottom: 5px; }
+  .banner .col-xs-12.col-sm-12 {
+    color: #fff;
+    text-align: center; }
+    .banner .col-xs-12.col-sm-12 span {
+      color: #fef017; }
+
+.funds_link .box {
+  text-align: center;
+  margin-top: -3.125%;
+  padding-bottom: 1.5625%; }
+
+.funds_link .title {
+  font-size: 0.875rem;
+  padding-top: 10px; }
+
+.funds_info .box {
+  text-align: center; }
+
+.funds_info .title {
+  color: #9aa09e; }
+
+.funds_info .amount {
+  color: #414443; }
+  .funds_info .amount span {
+    color: #a4aba9; }
+
+.funds_info .btn_empty_gray {
+  width: 90%;
+  padding: 1px 5px;
+  border-radius: 20px;
+  margin: auto; }
+
+.sub_link {
+  border: 2px solid #eff5f3; }
+  .sub_link .box {
+    text-align: center;
+    border: 2px solid #eff5f3; }
+    .sub_link .box .title {
+      color: #666c6a;
+      margin-top: 2px; }
+    .sub_link .box a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding-top: 10px; }
+    .sub_link .box img {
+      max-width: 28%; }
+
+.record .box {
+  padding: 11px 0;
+  text-align: center; }
+  .record .box img {
+    max-width: 12%; }
+
+.member_footer .row {
+  background-color: #e8f0ed;
+  padding-top: 12px;
+  padding-bottom: 25px; }
+  .member_footer .row .btn {
+    width: 93.75%;
+    display: block;
+    margin: auto; }
+
+.balance {
+  padding-top: 15px;
+  padding-bottom: 40px; }
+  .balance .reload {
+    width: 15%;
+    margin: auto;
+    display: block;
+    max-width: 60px; }
+    .balance .reload img {
+      width: 100%; }
+
+.balance_footer .row ul {
+  text-align: center;
+  margin: 15px auto; }
+  .balance_footer .row ul li {
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f4f3; }
+    .balance_footer .row ul li:first-child {
+      border-top: 1px solid #f0f4f3; }
+  .balance_footer .row ul .title {
+    width: 35px;
+    display: inline-block;
+    text-align: left;
+    margin-right: 30px; }
+
+.balance_footer .row .btn {
+  width: 93.75%;
+  display: block;
+  margin: auto; }

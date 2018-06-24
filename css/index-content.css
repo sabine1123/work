@@ -1,0 +1,254 @@
+@charset "UTF-8";
+.btn {
+  background-image: none;
+  background-repeat: no-repeat;
+  border: none;
+  text-shadow: none;
+  border-radius: 3px; }
+
+.btn_fill_green {
+  background-color: #26a97a;
+  color: #fff; }
+  .btn_fill_green:hover, .btn_fill_green:focus, .btn_fill_green:active {
+    color: #fff; }
+
+.btn_fill_red {
+  background-color: #f16c6c;
+  color: #fff; }
+  .btn_fill_red:hover, .btn_fill_red:focus, .btn_fill_red:active {
+    color: #fff; }
+
+.btn_empty_green {
+  border: 1px solid #26a97a;
+  color: #26a97a;
+  background-color: #fff; }
+  .btn_empty_green:hover, .btn_empty_green:focus, .btn_empty_green:active {
+    color: #26a97a; }
+
+.btn_empty_gray {
+  border: 1px solid #c2c7c3;
+  color: #c8d0cf;
+  background-color: #fff; }
+  .btn_empty_gray:hover, .btn_empty_gray:focus, .btn_empty_gray:active {
+    color: #c8d0cf; }
+
+.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child,
+.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child,
+.btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
+  border-radius: 3px; }
+
+html {
+  font-size: 100%; }
+
+body {
+  font-family: "微軟雅黑體", "微软雅黑体", "微軟正黑體", "微软正黑体", "Arial"; }
+
+h1, h2, h3 {
+  margin: 0; }
+
+button {
+  outline: none;
+  border: none;
+  background-color: transparent; }
+
+a {
+  color: inherit; }
+  a:focus, a:hover {
+    outline: none;
+    color: inherit;
+    text-decoration: none; }
+
+.close {
+  text-shadow: 0 0; }
+
+.mask {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 300;
+  position: fixed;
+  top: 0; }
+
+/*2017/10/16合并后，要更改的css*/
+section .container-fluid, section .container {
+  margin-top: 48px;
+  margin-bottom: 50px; }
+
+.mem_header .pull-left {
+  margin-top: 16px;
+  margin-left: 13px; }
+  .mem_header .pull-left img {
+    height: 18px; }
+
+.mem_header .brand_middle {
+  color: #b5ead7;
+  font-size: 0.9375rem; }
+
+.border_right {
+  border-right: 1px dotted #e8f0ed; }
+
+.border_bottom {
+  border-bottom: 4px solid #eff5f3; }
+
+.index_banner .swiper-slide {
+  min-height: 100px; }
+  .index_banner .swiper-slide img {
+    width: 100%; }
+
+.index_banner .swiper-pagination {
+  width: auto;
+  right: 14px;
+  bottom: 9px;
+  left: auto; }
+  .index_banner .swiper-pagination .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    opacity: 1; }
+  .index_banner .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #ffde00; }
+
+.title {
+  color: #353a38; }
+
+.index_sub_link .box {
+  text-align: center;
+  padding-top: 13px; }
+
+.index_sub_link .title {
+  font-size: 0.875rem;
+  padding-top: 10px; }
+
+.marquee_container {
+  background-color: #fff;
+  border-top: 4px solid #eff5f3;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  font-size: 0.875rem; }
+  .marquee_container .marquee_icon, .marquee_container .marquee_content {
+    display: inline-block;
+    vertical-align: middle; }
+  .marquee_container .marquee_icon {
+    width: 16px;
+    height: 16px; }
+    .marquee_container .marquee_icon img {
+      width: 16px; }
+  .marquee_container .marquee_content {
+    margin-left: 3.75%;
+    width: 87.1875%;
+    color: #626e6a;
+    overflow: hidden; }
+    .marquee_container .marquee_content .marquee_wrap span {
+      margin-right: 10px; }
+
+.slot_container {
+  padding-top: 13px; }
+  .slot_container .title {
+    font-size: 1rem;
+    text-align: center;
+    position: relative;
+    font-weight: bold;
+    color: #353a38; }
+  .slot_container p {
+    font-size: 0.875rem;
+    color: #676f6c; }
+  .slot_container .more {
+    font-size: 0.875rem;
+    color: #9ba7a2;
+    position: absolute;
+    right: 3.75%;
+    top: 0; }
+  .slot_container .meter {
+    background: url(../img/index/meter.jpg) no-repeat center;
+    background-color: #6acdf7;
+    background-size: cover;
+    height: 73px;
+    position: relative; }
+    .slot_container .meter .title {
+      font-size: 1rem;
+      color: #fde8d2;
+      position: absolute;
+      left: 10.625%;
+      top: 18%; }
+    .slot_container .meter .money {
+      font-size: 1.25rem;
+      color: #fff;
+      position: absolute;
+      left: 12.65625%;
+      top: 42%; }
+
+.slot_img {
+  padding-top: 26px;
+  padding-bottom: 26px; }
+  .slot_img .swiper-slide {
+    width: 25.78125%; }
+    .slot_img .swiper-slide img {
+      width: 100%; }
+
+.live_container img {
+  width: 100%; }
+
+.live_img {
+  padding-top: 20px;
+  padding-bottom: 20px; }
+
+.sport_img {
+  background: url(../img/index/sport_bg.png) no-repeat center bottom; }
+
+.list_block li {
+  display: inline-block;
+  width: 30.99174%; }
+  .list_block li:nth-child(2) {
+    text-align: center; }
+  .list_block li:nth-child(3) {
+    text-align: right; }
+
+.list_block .list_title {
+  width: 93.75%;
+  background-image: -webkit-gradient(linear, left top, right top, from(#f9eccd), color-stop(48%, #fff8e6), to(#f9eccd));
+  background-image: -webkit-linear-gradient(left, #f9eccd, #fff8e6 48%, #f9eccd);
+  background-image: -o-linear-gradient(left, #f9eccd, #fff8e6 48%, #f9eccd);
+  background-image: linear-gradient(to right, #f9eccd, #fff8e6 48%, #f9eccd);
+  border-radius: 3px;
+  margin: auto;
+  padding: 10px 6.25%; }
+  .list_block .list_title li {
+    font-size: 1rem;
+    color: #8d5940; }
+
+.list_box {
+  overflow: hidden; }
+  .list_box .lists {
+    width: 93.75%;
+    font-size: 0.875rem;
+    color: #616764;
+    padding-left: 6.25%;
+    padding-right: 6.25%;
+    padding: 8px 6.25%;
+    margin: auto;
+    border-bottom: 1px dashed #d8dfdc; }
+
+.download_container {
+  position: relative; }
+  .download_container:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    top: -4px;
+    background-color: #eff5f3;
+    left: 0; }
+
+.download_img {
+  padding-top: 22px;
+  padding-bottom: 28px; }
+  .download_img .swiper-slide {
+    width: 25.78125%; }
+    .download_img .swiper-slide img {
+      width: 100%; }
+  .download_img .swiper-wrapper {
+    padding-left: 20px; }
+
+.modal-backdrop {
+  top: 55px; }

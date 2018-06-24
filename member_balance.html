@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="./lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+
+      <!-- Common css -->
+      <link rel="stylesheet" href="./css/Common.css" type="text/css" media="screen">
+      <link rel="stylesheet" href="./css/popup.css" type="text/css" media="screen">
+
+
+      <link rel="stylesheet" href="./css/member.css" type="text/css" media="screen">      
+      <script src="./lib/jquery/jquery-3.2.1.min.js"></script>
+
+
+      <title>多乐</title>
+  </head>
+
+  <body>
+
+  <!-- header -->
+  <div class="container">
+    <nav class="navbar-default navbar-fixed-top mem_header" role="navigation">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="navbar-header">
+            <button type="button" class="pull-left" onclick="history.go(-1)">
+               <img src="img/member/pre_green_icon.png">          
+            </button>
+      
+            <!-- 标题 -->
+            <div class="navbar-brand brand_middle">点击查看</div>
+            <!-- 客服 -->
+            <a class="navbar-brand pull-right" href=""><img src="./img/icons/service_icon.png" alt="Customer"></a>
+          </div>
+        </div>
+        </div>    
+    </nav>
+  </div>
+
+  <section>
+    <div class="container-fluid balance">
+      <div class="row">
+        <button class="reload"><img src="img/member/reload_icon.png"></button>
+
+      </div> 
+      <!-- go deposit -->
+      <div class="balance_footer">
+        <div class="row">
+          <ul>
+                <li><span class="title">钱包</span><span class="amount"><span class="amount">2200.00</span></li>
+                <li><span class="title">PT</span><span class="amount"><span class="amount">2200.00</span></li>
+                <li><span class="title">AG</span><span class="amount"><span class="amount">2200.00</span></li>
+                <li><span class="title">MG</span><span class="amount"><span class="amount">2200.00</span></li>
+                <li><span class="title">BBIN</span><span class="amount"><span class="amount">2200.00</span></li>
+                <li><span class="title">DT</span><span class="amount"><span class="amount">2200.00</span></li>
+                <li><span class="title">HABA</span><span class="amount"><span class="amount">2200.00</span></li>
+                <li><span class="title">沙巴</span><span class="amount"><span class="amount">2200.00</span></li>
+                <li><span class="title">TTG</span><span class="amount"><span class="amount">2200.00</span></li>
+                <li><span class="title">BS</span><span class="amount"><span class="amount">2200.00</span></li>
+                <li><span class="title">PNG</span><span class="amount"><span class="amount">2200.00</span></li>
+              </ul>    
+          <a href="./member_deposit.html" class="btn btn-default btn_fill_green" role="button">我要充值</a>
+        </div>
+      </div>
+    </div>
+  </section>
+   
+
+    <footer class="navbar-default navbar-fixed-bottom text-nowrap">
+    </footer> 
+    
+  
+
+    <script src="./lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="./lib/jquery.validate/jquery.validate.min.js"></script>
+    <script src="./lib/jquery.blockUI.js"></script>
+
+    <script src="js/_component.js"></script>    
+    <script src="js/base.js"></script>    
+    <script src="js/object.js"></script>
+    <script src="js/validate.js"></script>
+    
+    <script>
+
+/*变数区*/
+var SideNav = $(".SideNav");
+var active = "active";
+/*--*/
+
+      $(document).ready(function(){
+
+        $('footer').html(el_footer);
+        $('body').after(el_popupBox);
+        baseCtrl();
+        
+
+      });
+    </script>
+
+  </body>
+</html>

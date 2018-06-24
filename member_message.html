@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="./lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+
+      <!-- Common css -->
+      <link rel="stylesheet" href="./css/Common.css" type="text/css" media="screen">
+      <link rel="stylesheet" href="./css/popup.css" type="text/css" media="screen">
+
+
+      <link rel="stylesheet" href="./css/member_message.css" type="text/css" media="screen">      
+      <script src="./lib/jquery/jquery-3.2.1.min.js"></script>
+
+
+      <title>多乐</title>
+  </head>
+
+  <body>
+
+  <!-- header -->
+  <div class="container">
+    <nav class="navbar-default navbar-fixed-top mem_header" role="navigation">
+        <div class="container-fluid clearfix">
+          <div class="row">
+            <div class="navbar-header">
+              <button type="button" class="pull-left" onclick="history.go(-1)">
+                 <img src="img/member/pre_green_icon.png">          
+              </button>
+        
+              <!-- 标题 -->
+              <div class="navbar-brand brand_middle">站内信息</div>
+              <!-- 客服 -->
+              <a class="navbar-brand pull-right" href=""><img src="./img/icons/service_icon.png" alt="Customer"></a>
+            </div>
+          </div>
+        </div>    
+      </nav>
+  </div>
+  </section>
+
+  <section class="member_message content_wrap">
+    <div class="container">
+      <div class="row">
+
+          <ul class="list col-xs-12 col-sm-12">
+            <li class="col-xs-12 col-sm-12 clearfix">
+              <div class="header">
+                <span class="title">微信暂停使用通知：</span>
+                <span class="time">
+                    <img src="img/member/time_icon.png" alt="" class="">
+                    <span>08-26 18:38</span>
+                </span>
+
+              </div>
+              <div class="body">
+                <div class="text">收款微信暂时暂停使用，请大家选择其他的支付方式，给您带来不便，十分抱歉。</div>
+              </div>
+            </li>
+            <li class="col-xs-12 col-sm-12 clearfix">
+              <div class="header">
+                <span class="title">微信暂停使用通知：</span>
+                <span class="time">
+                    <img src="img/member/time_icon.png" alt="" class="">
+                    <span>08-26 18:38</span>
+                </span>
+
+              </div>
+              <div class="body">
+                <div class="text">收款微信暂时暂停使用，请大家选择其他的支付方式，给您带来不便，十分抱歉。</div>
+              </div>
+            </li>
+            <li class="col-xs-12 col-sm-12 clearfix">
+              <div class="header">
+                <span class="title">微信暂停使用通知：</span>
+                <span class="time">
+                    <img src="img/member/time_icon.png" alt="" class="">
+                    <span>08-26 18:38</span>
+                </span>
+
+              </div>
+              <div class="body">
+                <div class="text">收款微信暂时暂停使用，请大家选择其他的支付方式，给您带来不便，十分抱歉。</div>
+              </div>
+            </li>
+            <li class="col-xs-12 col-sm-12 clearfix">
+              <div class="header">
+                <span class="title">微信暂停使用通知：</span>
+                <span class="time">
+                    <img src="img/member/time_icon.png" alt="" class="">
+                    <span>08-26 18:38</span>
+                </span>
+
+              </div>
+              <div class="body">
+                <div class="text">收款微信暂时暂停使用，请大家选择其他的支付方式，给您带来不便，十分抱歉。</div>
+              </div>
+            </li>
+            <li class="col-xs-12 col-sm-12 clearfix">
+              <div class="header">
+                <span class="title">微信暂停使用通知：</span>
+                <span class="time">
+                    <img src="img/member/time_icon.png" alt="" class="">
+                    <span>08-26 18:38</span>
+                </span>
+
+              </div>
+              <div class="body">
+                <div class="text">收款微信暂时暂停使用，请大家选择其他的支付方式，给您带来不便，十分抱歉。</div>
+              </div>
+            </li>
+
+          </ul>
+        
+
+      </div>
+    </div>
+  </section>
+   
+
+  <footer class="navbar-default navbar-fixed-bottom text-nowrap">
+  </footer> 
+  
+
+
+  <script src="./lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+  <script src="./lib/jquery.validate/jquery.validate.min.js"></script>
+  <script src="./lib/jquery.blockUI.js"></script>
+
+  <script src="js/_component.js"></script>    
+  <script src="js/base.js"></script>    
+  <script src="js/object.js"></script>
+  <script src="js/validate.js"></script>
+  
+  <script>
+
+    /*变数区*/
+    var SideNav = $(".SideNav");
+    var active = "active";
+    /*--*/
+
+    $(document).ready(function(){
+      // $('.Sinvite').on('click',function(){
+      //   // _setValidate("#inviteF");
+ 
+
+      //   //----添加送出姓名  
+      //   _showPop('已邀请您的好友');        
+      // });
+
+
+      /*------------- common -------------*/
+      $('footer').html(el_footer);
+      $('body').after(el_popupBox);
+      baseCtrl();
+
+      /*------------- common end-------------*/
+
+    });//end of doucument.ready
+  </script>
+
+  </body>
+</html>

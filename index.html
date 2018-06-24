@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="./lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+
+      <!-- Common css -->
+      <link rel="stylesheet" href="./css/Common.css" type="text/css" media="screen">
+      <link rel="stylesheet" href="./css/popup.css" type="text/css" media="screen">
+
+      <!-- for index -->
+      <link rel="stylesheet" href="./lib/Swiper-master/css/swiper.css">
+      <link rel="stylesheet" type="text/css" href="./lib/slick/slick.css"/>
+      <link rel="stylesheet" type="text/css" href="./lib/slick/slick-theme.css"/>
+      <link rel="stylesheet" href="./lib/odometer-master/themes/odometer-theme-default.css" />
+
+      <link rel="stylesheet" href="./css/index-content.css" type="text/css" media="screen">      
+      
+      <script src="./lib/jquery/jquery-3.2.1.min.js"></script>
+
+
+      <title>多乐</title>
+  </head>
+
+  <body>
+
+  <!-- header -->
+  <nav class="navbar-default navbar-fixed-top" role="navigation">
+  </nav>
+
+  <!-- 侧边拦 -->
+  <div class="SideNav text-nowrap">
+  </div>
+  <section>
+    <div class="container-fluid">
+        <!-- <div class="row"> -->
+          <!-- banner -->
+          <div class="row">
+            <div class="col-xs-12 col-sm-12">
+              <div class="row">
+                <div class="swiper-container index_banner">
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">                      
+                            <img src="img/index/banner/images_01.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/index/banner/images_01.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/index/banner/images_01.jpg" alt="">
+                        </div>               
+                    </div>
+                    <div class="swiper-pagination index_banner_p"></div>
+                </div><!-- swiper -->
+  
+              </div>
+            </div>
+          </div>
+          
+          <!-- sub_link -->
+          <div class="row index_sub_link">
+            <div class="col-xs-3 col-sm-3 box">
+              <a href="./promotions.html">
+                <img src="img/index/promotions_icon.png" alt="" class="img-responsive center-block">
+                <p class="title">最新优惠</p>
+              </a>
+            </div>
+            <div class="col-xs-3 col-sm-3 box">
+              <a href="./vip.html">
+                <img src="img/index/club_icon.png" alt="" class="img-responsive center-block">
+                <p class="title">俱乐部</p>
+              </a>
+            </div>
+            <div class="col-xs-3 col-sm-3 box">
+              <a href="#download">
+                <img src="img/index/appdown_icon.png" alt="" class="img-responsive center-block">
+                <p class="title">APP下载</p>
+              </a>
+            </div>
+            <div class="col-xs-3 col-sm-3 box">
+              <a href="">
+                <img src="img/index/novice_icon.png" alt="" class="img-responsive center-block">
+                <p class="title">新手操作</p>
+              </a>
+            </div>  
+          </div>
+          
+          <!-- marquee -->
+          <div class="row">
+            <div class=" col-xs-12 col-sm-12 marquee_container border_bottom">
+              <div class="marquee_icon">
+                <img src="img/index/volume_icon.png" alt="">
+              </div>
+              <div class="marquee_content ">
+                <div class="marquee_wrap">
+                  <!-- <span data-toggle="modal" data-target="#marquee1">尊敬的会员由于目前入款人数金额较大，微信收款账号已经更改</span>
+                  <span data-toggle="modal" data-target="#marquee2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit modi non unde obcaecati nesciunt nam, natus dolores cupiditate, amet vel!</span> -->
+              </div>  
+              </div>
+            </div>
+          </div>
+  
+          <!-- 老虎机 -->
+          <div class="row">
+            <div class=" col-xs-12 col-sm-12 slot_container">
+              <div class="title">
+                老虎机
+                <p>财源滚滚，乐在不停</p>
+                <span class="more"><a href="./slot.html">+ 更多</a></span>
+              </div>
+              <div class="row">
+                <div class="col-xs-12 col-sm-12 meter">              
+                  <span class="title">老虎机累积总奖池</span>
+                  <div class="money" id="jackpotVal">138565544.21</div>
+                </div>
+              </div>          
+            </div>
+          </div>
+  
+          <div class="row">
+            <div class="swiper-container col-xs-12 col-sm-12 slot_img border_bottom">
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">                      
+                      <a href="./slot.html?t=tMG">
+                        <img src="img/index/slot_mg_img.png" alt="MG">
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="./slot.html?t=tAG">
+                        <img src="img/index/slot_ag_img.png" alt="AG">
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="./slot.html?t=tBBIN">
+                        <img src="img/index/slot_bbin_img.png" alt="BBIN">
+                      </a>
+                    </div> 
+  
+                    <div class="swiper-slide">
+                      <a href="./slot.html?t=tPT">
+                        <img src="img/index/slot_pt_img.png" alt="PT">
+                      </a>
+                    </div>                                  
+                </div>
+                <div class="swiper-pagination index_banner_p"></div>
+            </div><!-- swiper -->
+          </div>
+  
+          <!-- 真人 -->
+          <div class="row">
+            <div class=" col-xs-12 col-sm-12 live_container">
+              <div class="row">
+                <img src="img/index/live_title.png" alt="" class="img-responsive center-block">
+                <a href=""><img src="img/index/ad.jpg" alt="" class="img-responsive center-block"></a>
+              </div>          
+            </div>
+            
+  
+            <div class="col-xs-12 col-sm-12 live_img border_bottom">
+              <div class=" col-xs-6 col-sm-6 border_right">
+                  <a href="./live.html"><img src="img/index/live_ag.png" alt="" class="img-responsive center-block"></a>
+              </div>
+              <div class=" col-xs-6 col-sm-6">
+                  <a href="./live.html"><img src="img/index/live_bbin.png" alt="" class="img-responsive center-block"></a>
+              </div>          
+            </div>          
+          </div>
+  
+          <!-- 体育-->
+          <div class="row">
+            <div class=" col-xs-12 col-sm-12 sport_container">
+              <div class="row">
+                <img src="img/index/sport_title.png" alt="" class="img-responsive center-block">
+              </div>          
+            </div>         
+  
+            <div class="col-xs-12 col-sm-12 sport_img border_bottom">
+              <div class=" col-xs-6 col-sm-6 border_right">
+                  <a href="./sport.html"><img src="img/index/sport_shaba.png" alt="" class="img-responsive center-block"></a>
+              </div>
+              <div class=" col-xs-6 col-sm-6">
+                  <a href="./sport.html"><img src="img/index/sport_bbin.png" alt="" class="img-responsive center-block"></a>
+              </div>          
+            </div>          
+          </div>
+  
+          <!-- 彩票 -->
+          <div class="row">
+            <div class=" col-xs-12 col-sm-12 lottery_container border_bottom">
+              <div class="row">
+                <a href=""><img src="img/index/lottery.jpg" alt="" class="img-responsive center-block"></a>
+              </div>          
+            </div>
+          </div>
+  
+          <!-- 中奖名单 -->
+          <div class="row">
+            <div class=" col-xs-12 col-sm-12 list_container">
+              <div class="row">
+                <img src="img/index/winner_title.png" alt="" class="img-responsive center-block">
+              </div>          
+            </div>           
+            <div class="col-xs-12 col-sm-12 list_block">
+              <div class="row">
+                <ul class="list_title">
+                  <li>会员账号</li>
+                  <li>游戏名称</li>
+                  <li>盈利金额</li>
+                </ul>
+                <div class="list_box">
+                    <div>             
+                      <ul class="lists">
+                        <li>abcas***</li>
+                        <li>疯狂的猴子</li>
+                        <li>550060元</li>
+                      </ul>
+                    </div> 
+                    <div>
+                      <ul class="lists">
+                        <li>flasht***</li>
+                        <li>罗马帝国</li>
+                        <li>556779元</li>
+                      </ul>
+                    </div>
+                    
+                    <div>             
+                      <ul class="lists">
+                        <li>abcas***</li>
+                        <li>疯狂的猴子</li>
+                        <li>550060元</li>
+                      </ul>
+                    </div> 
+                
+                    <div>             
+                      <ul class="lists">
+                        <li>abcas***</li>
+                        <li>疯狂的猴子</li>
+                        <li>550060元</li>
+                      </ul>
+                    </div> 
+                    <div>
+                      <ul class="lists">
+                        <li>flasht***</li>
+                        <li>罗马帝国</li>
+                        <li>556779元</li>
+                      </ul>
+                    </div>
+                    
+                    <div>             
+                      <ul class="lists">
+                        <li>abcas***</li>
+                        <li>疯狂的猴子</li>
+                        <li>550060元</li>
+                      </ul>
+                    </div>                                            
+                </div>
+          
+            </div>
+          </div>
+        </div>
+  
+          <!-- 下载 -->
+          <div class="row">
+            <div class=" col-xs-12 col-sm-12 download_container" id="download">
+              <div class="row">
+                <img src="img/index/app_title.png" alt="" class="img-responsive center-block">
+              </div>          
+            </div>          
+            <div class="swiper-container col-xs-12 col-sm-12 download_img">
+                <div class="swiper-wrapper row">
+                    <div class="swiper-slide">                      
+                      <a href="">
+                        <img src="img/index/app_ios.png" alt="">
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="">
+                        <img src="img/index/app_bbin.png" alt="">
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="">
+                        <img src="img/index/app_dt.png" alt="">
+                      </a>
+                    </div> 
+  
+                    <div class="swiper-slide">
+                      <a href="">
+                        <img src="img/index/app_mg.png" alt="">
+                      </a>
+                    </div>                                  
+                </div>
+            </div>
+          </div>
+    </div>
+
+  </section>
+   
+  <div id="marquee1" class="modal popup_full_warp" data-backdrop="static">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="p_header">
+          <button type="button" class="close close_btn" data-dismiss="modal" aria-hidden="true"></button>
+          <h2 class="p_title"><span class="icon">※</span><span>微信收款账号已经更改</span></h2>
+        </div>
+
+        <div class="p_body">
+          <div class="sub_box">
+            <div class="sub_title">活动</div>
+            <div class="sub_content">
+              尊敬的会员由于目前入款人数金额较大，微信收款账号已经更改
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>  
+
+  <div id="marquee2" class="modal popup_full_warp" data-backdrop="static">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="p_header">
+          <button type="button" class="close close_btn" data-dismiss="modal" aria-hidden="true"></button>
+          <h2 class="p_title"><span class="icon">※</span><span>Lorem ipsum dolor sit amet.</span></h2>
+        </div>
+
+        <div class="p_body">
+          <div class="sub_box">
+            <div class="sub_title">Lorem ipsum.</div>
+            <div class="sub_content">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure aspernatur itaque sed maiores nihil sint unde, ratione eos vel explicabo.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>  
+
+
+  <footer class="navbar-default navbar-fixed-bottom text-nowrap">
+  </footer> 
+
+    <script src="./lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="./lib/jquery.validate/jquery.validate.min.js"></script>
+    <script src="./lib/jquery.blockUI.js"></script>
+
+    <script src="./lib/Swiper-master/js/swiper.min.js"></script>
+    <script src="./lib/jquery.marquee.js"></script>
+    <script src="./lib/slick/slick.min.js"></script>
+    <script src="./lib/odometer-master/odometer.min.js"></script>
+
+    <script src="js/_component.js"></script>
+    <script src="js/object.js"></script>    
+    <script src="js/base.js"></script>
+    <script src="js/validate.js"></script>
+
+
+    <script>
+      var bannerSwiper = new Swiper ('.index_banner', {
+        // direction: 'vertical',
+        loop: true,
+        pagination: {
+            el: '.index_banner_p'
+            // dynamicBullets: true,
+        },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false
+        },    
+        // Navigation arrows
+        // nextButton: '.swiper-button-next',
+        // prevButton: '.swiper-button-prev',
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        }
+        // scrollbar: '.swiper-scrollbar',
+      });
+
+      var slotSwiper = new Swiper ('.slot_img', {
+        slidesPerView: 'auto',
+        spaceBetween: 20
+  
+      });
+
+      var slotSwiper = new Swiper ('.download_img', {
+        slidesPerView: 'auto',
+        spaceBetween: 10
+  
+      });
+
+
+/*变数区*/
+var SideNav = $(".SideNav");
+var active = "active";
+/*--*/
+
+    function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for(var i = 0; i <ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+    if(getCookie('jackpotval') == 'undefined' || getCookie('jackpotval') == '' || getCookie('jackpotval') == 'NaN') {
+      var jackpotVal = parseFloat($('#jackpotVal').text());
+      document.cookie = "jackpotval="+jackpotVal;
+    }
+    else {
+      var jackpotVal = parseFloat(getCookie('jackpotval'));
+    }
+    setInterval(function(){
+      document.cookie = "jackpotval="+jackpotVal;
+      $('#jackpotVal').text(addCommas(jackpotVal.toFixed(2)));
+      jackpotVal = parseFloat(jackpotVal) + .22;
+    }, 1000);
+
+    function addCommas(nStr) {
+      nStr += '';
+      x = nStr.split('.');
+      x1 = x[0];
+      x2 = x.length > 1 ? '.' + x[1] : '';
+      var rgx = /(\d+)(\d{3})/;
+      while (rgx.test(x1)) {
+        x1 = x1.replace(rgx, '$1' + ',' + '$2');
+      }
+      return x1 + x2;
+    }
+
+
+
+
+      $(document).ready(function(){
+
+// /*------------- common -------------*/
+        $('nav').html(el_header);
+        $('.SideNav').html(el_nav);
+        $('footer').html(el_footer);
+        $('body').after(el_popupBox);
+        baseCtrl();    
+// /*------------- common end-------------*/
+        
+        popupHeight();
+
+        //累积奖池动态效果
+        // $('.odometer').html(138565544);
+
+        // marquee
+        var marquee_str = `<span data-toggle="modal" data-target="#marquee1">尊敬的会员由于目前入款人数金额较大，微信收款账号已经更改</span>
+                  <span data-toggle="modal" data-target="#marquee2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit modi non unde obcaecati nesciunt nam, natus dolores cupiditate, amet vel!</span>`
+        $('.marquee_wrap').append(marquee_str).marquee({
+          duration: 5000,
+          direction: 'left'
+        });
+
+        // winner list
+        $('.list_box').slick({
+          vertical: true,
+          arrows: false,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          slidesToShow: 5,
+        });
+
+
+      });//end of document.ready
+    </script>
+
+  </body>
+</html>

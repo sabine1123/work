@@ -1,0 +1,172 @@
+@charset "UTF-8";
+.btn {
+  background-image: none;
+  background-repeat: no-repeat;
+  border: none;
+  text-shadow: none;
+  border-radius: 3px; }
+
+.btn_fill_green {
+  background-color: #26a97a;
+  color: #fff; }
+  .btn_fill_green:hover, .btn_fill_green:focus, .btn_fill_green:active {
+    color: #fff; }
+
+.btn_fill_red {
+  background-color: #f16c6c;
+  color: #fff; }
+  .btn_fill_red:hover, .btn_fill_red:focus, .btn_fill_red:active {
+    color: #fff; }
+
+.btn_empty_green {
+  border: 1px solid #26a97a;
+  color: #26a97a;
+  background-color: #fff; }
+  .btn_empty_green:hover, .btn_empty_green:focus, .btn_empty_green:active {
+    color: #26a97a; }
+
+.btn_empty_gray {
+  border: 1px solid #c2c7c3;
+  color: #c8d0cf;
+  background-color: #fff; }
+  .btn_empty_gray:hover, .btn_empty_gray:focus, .btn_empty_gray:active {
+    color: #c8d0cf; }
+
+.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child,
+.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child,
+.btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
+  border-radius: 3px; }
+
+html {
+  font-size: 100%; }
+
+body {
+  font-family: "微軟雅黑體", "微软雅黑体", "微軟正黑體", "微软正黑体", "Arial"; }
+
+h1, h2, h3 {
+  margin: 0; }
+
+button {
+  outline: none;
+  border: none;
+  background-color: transparent; }
+
+a {
+  color: inherit; }
+  a:focus, a:hover {
+    outline: none;
+    color: inherit;
+    text-decoration: none; }
+
+.close {
+  text-shadow: 0 0; }
+
+.mask {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 300;
+  position: fixed;
+  top: 0; }
+
+/*2017/10/16合并后，要更改的css*/
+section .container-fluid, section .container {
+  margin-top: 48px;
+  margin-bottom: 50px; }
+
+.mem_header .pull-left {
+  margin-top: 16px;
+  margin-left: 13px; }
+  .mem_header .pull-left img {
+    height: 18px; }
+
+.mem_header .brand_middle {
+  color: #b5ead7;
+  font-size: 0.9375rem; }
+
+.border_right {
+  border-right: 1px dotted #e8f0ed; }
+
+.border_bottom {
+  border-bottom: 4px solid #eff5f3; }
+
+body {
+  background-color: #0f776e; }
+
+.binding {
+  min-height: 475px;
+  margin-top: 50px;
+  background-image: url(../img/member/add_card_bg.jpg);
+  background-size: contain;
+  padding-left: 6.25%;
+  padding-top: 51.5625%;
+  position: relative; }
+
+.del {
+  padding: 6px 13px;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  position: absolute;
+  right: 35px;
+  top: 74px; }
+
+.banner .swiper-slide {
+  min-height: 100px;
+  width: 73.125%;
+  max-width: 280px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 4px;
+  padding: 6px 3.75% 15px; }
+  .banner .swiper-slide .header img {
+    width: 19.23077%; }
+  .banner .swiper-slide .header .title {
+    font-size: 1.125rem;
+    letter-spacing: 1px;
+    color: #4a504f;
+    margin-left: 2.99145%; }
+  .banner .swiper-slide .header button {
+    border: solid 1px #ccd4d1;
+    border-radius: 2px;
+    padding: 3px 5px;
+    position: absolute;
+    right: 13px;
+    top: 13px; }
+  .banner .swiper-slide .middle {
+    padding-left: 15px; }
+    .banner .swiper-slide .middle span {
+      display: block; }
+    .banner .swiper-slide .middle .title {
+      font-size: 1.125rem;
+      letter-spacing: 3.5px;
+      color: #6a716f;
+      margin-top: 14px; }
+    .banner .swiper-slide .middle .content {
+      font-size: 0.875rem; }
+    .banner .swiper-slide .middle .line {
+      width: 31.62393%;
+      height: 1px;
+      background-color: #ccd4d1;
+      margin-top: 3px;
+      margin-bottom: 3px; }
+  .banner .swiper-slide .footer {
+    font-size: 0.875rem;
+    letter-spacing: 1px;
+    text-align: right;
+    margin-top: 7px; }
+
+.banner .swiper-pagination {
+  width: auto;
+  right: 14px;
+  bottom: 9px;
+  left: auto; }
+  .banner .swiper-pagination .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    opacity: 1; }
+  .banner .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #ffde00; }
+
+.title {
+  color: #353a38; }

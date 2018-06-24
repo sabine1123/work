@@ -1,0 +1,39 @@
+// bs
+.btn
+	background-image: none
+	background-repeat: no-repeat
+	border: none
+	text-shadow: none
+	border-radius: 3px
+
+
+// customization
+.btn_fill_green
+	background-color: $btn_green
+	color: #fff
+	&:hover, &:focus, &:active
+		color: #fff
+
+.btn_fill_red
+	background-color: $btn_red
+	color: #fff
+	&:hover, &:focus, &:active
+		color: #fff
+
+.btn_empty_green
+	border: 1px solid $btn_green
+	color: $btn_green
+	background-color: #fff
+	&:hover, &:focus, &:active
+		color: $btn_green
+.btn_empty_gray
+	border: 1px solid #c2c7c3
+	color: #c8d0cf
+	background-color: #fff
+	&:hover, &:focus, &:active
+		color: #c8d0cf
+
+.btn-group>.btn-group:last-child:not(:first-child)>.btn:first-child,
+.btn-group>.btn-group:first-child:not(:last-child)>.btn:last-child, 
+.btn-group>.btn-group:first-child:not(:last-child)>.dropdown-toggle			
+	border-radius: 3px

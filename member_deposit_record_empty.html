@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="./lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+
+      <!-- Common css -->
+      <link rel="stylesheet" href="./css/Common.css" type="text/css" media="screen">
+      <link rel="stylesheet" href="./css/popup.css" type="text/css" media="screen">
+
+
+      <link rel="stylesheet" href="./css/member.css" type="text/css" media="screen">      
+      <link rel="stylesheet" href="./css/member_deposit_record_empty.css" type="text/css" media="screen">      
+      <script src="./lib/jquery/jquery-3.2.1.min.js"></script>
+
+
+      <title>存款纪录-空</title>
+  </head>
+
+  <body class="member_deposit_record">
+
+  <!-- header -->
+  <div class="container">
+    <nav class="navbar-default navbar-fixed-top mem_header" role="navigation">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="navbar-header">
+            <button type="button" class="pull-left" onclick="history.go(-1)">
+                <img style="width:19.5px;height:19.5px" src="img/member/pre_green_icon.png" alt="previous_arrow">
+            </button>
+      
+            <!-- 标题 -->
+            <div class="navbar-brand brand_middle">存款记录</div>
+            <!-- 客服 -->
+            <a class="navbar-brand pull-right" href=""><img src="./img/icons/service_icon.png" alt="Customer"></a>
+          </div>
+        </div>
+        </div>    
+    </nav>
+  </div>
+
+  <section class="deposit_record_table">
+    <div class="container">
+      <div class="record_empty text-center">
+          <div class="title">空空如也...</div>
+          <img style="width:154px;height:154px;" src="img/member/icon.png" alt="record empty">
+          <a href="./member_deposit.html">
+            <div class="btn_empty">
+              <button>前去存款</button>
+            </div>
+          </a>
+      </div>
+      
+        
+    </div>
+  </section>
+   
+
+    <footer class="navbar-default navbar-fixed-bottom text-nowrap">
+    </footer> 
+    
+  
+
+    <script src="./lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="./lib/jquery.validate/jquery.validate.min.js"></script>
+    <script src="./lib/jquery.blockUI.js"></script>
+
+    <script src="js/_component.js"></script>    
+    <script src="js/base.js"></script>    
+    <script src="js/object.js"></script>
+    <script src="js/validate.js"></script>
+    
+    <script>
+
+/*变数区*/
+var SideNav = $(".SideNav");
+var active = "active";
+/*--*/
+
+      $(document).ready(function(){
+
+/*------------- common -------------*/
+        // $('nav').html(el_header);
+        // $('.SideNav').html(el_nav);
+        $('footer').html(el_footer);
+        $('body').after(el_popupBox);
+        baseCtrl();
+
+
+        // 表格内容
+        // $('.slidedown_row').hide();
+
+
+        $('.deposit_record_table .action').on('click',function(){
+          console.log(3)
+          // $('.slidedown_row').show();
+          $(this).parent().next('.slidedown_row').toggleClass(active);
+          // $(this).siblings('.slidedown_row').toggleClass(active);
+          // $(this).parent();
+          // $(this).next('.slidedown_row').slideToggle();
+        });
+/*------------- common end-------------*/
+
+      });
+    </script>
+
+  </body>
+</html>

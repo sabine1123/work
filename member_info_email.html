@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="./lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+
+      <!-- Common css -->
+      <link rel="stylesheet" href="./css/Common.css" type="text/css" media="screen">
+      <link rel="stylesheet" href="./css/popup.css" type="text/css" media="screen">
+
+
+      <link rel="stylesheet" href="./css/member_info.css" type="text/css" media="screen">      
+      <script src="./lib/jquery/jquery-3.2.1.min.js"></script>
+
+
+      <title>多乐</title>
+  </head>
+
+  <body>
+
+  <!-- header -->
+  <div class="container">
+    <nav class="navbar-default navbar-fixed-top mem_header" role="navigation">
+        <div class="container-fluid clearfix">
+          <div class="row">
+            <div class="navbar-header">
+              <button type="button" class="pull-left" onclick="history.go(-1)">
+                 <img src="img/member/pre_green_icon.png">          
+              </button>
+        
+              <!-- 标题 -->
+              <div class="navbar-brand brand_middle">添加邮箱</div>
+              <!-- 客服 -->
+              <a class="navbar-brand pull-right" href=""><img src="./img/icons/service_icon.png" alt="Customer"></a>
+            </div>
+          </div>
+          </div>    
+      </nav>
+  </div>
+
+  <section class="member_infomation_email">
+    <form action="" id="mailF">
+      <ul class="list col-xs-12 col-sm-12 no_pad">
+        <li class="col-xs-12 col-sm-12 clearfix no_pad">
+          <span class="icon col-xs-1 col-sm-2">
+            <img src="./img/member/phone_green_icon.png" alt="">
+          </span>
+          <span class="title col-xs-2 col-sm-3">邮箱</span>
+          <span class="value no_pad col-xs-5 col-sm-3">
+            <input type="text" placeholder="请输入邮箱" name="checkEmail" id="memMail">
+          </span>
+          <span class="validate_group">
+            <button class="btn_empty_green" id="gMailV">获取验证码</button>
+          </span>
+        </li>
+        <li class="col-xs-12 col-sm-12 clearfix no_pad">
+          <span class="icon col-xs-1 col-sm2">
+            <img src="./img/member/phone_verify_icon.png" alt="">
+          </span>
+          <span class="title col-xs-2 col-sm-3">验证码</span>
+          <span class="value no_pad col-xs-5 col-sm-3">
+            <input type="text" placeholder="请输入验证码" name="checkValidCode" id="mailV">
+          </span>
+        </li>
+      </ul>
+      <div class="button_group col-xs-12 col-sm-12">
+        <button class="btn btn_fill_green col-xs-12" id="sMemMail">
+          确认提交
+        </button>
+      </div>
+    </form>
+  </section>
+   
+
+  <footer class="navbar-default navbar-fixed-bottom text-nowrap">
+  </footer> 
+  
+
+
+  <script src="./lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+  <script src="./lib/jquery.validate/jquery.validate.min.js"></script>
+  <script src="./lib/jquery.blockUI.js"></script>
+
+  <script src="js/_component.js"></script>    
+  <script src="js/base.js"></script>    
+  <script src="js/object.js"></script>
+  <script src="js/validate.js"></script>
+  <script>
+
+    /*变数区*/
+    var SideNav = $(".SideNav");
+    var active = "active";
+    /*--*/
+
+      $(document).ready(function(){
+
+        _setValidate("#mailF");
+
+        // $('#gMailV').on('click',function(){
+        //   _showPop('验证码已发送到您的邮箱');
+        // });
+        // $('#sMemMail').on('click',function(){     
+        //   var mail_value = $('#memMail').val();
+        //   var mailV_value = $('#mailV').val(); 
+
+          
+        //   //----添加送出验证           
+        //   _showPop('您的邮箱已验证');
+         
+        // });
+
+
+        /*------------- common -------------*/
+        $('footer').html(el_footer);
+        $('body').after(el_popupBox);
+        baseCtrl();
+
+      /*------------- common end-------------*/
+      });
+    </script>
+
+  </body>
+</html>

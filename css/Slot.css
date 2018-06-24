@@ -1,0 +1,424 @@
+@charset "UTF-8";
+.btn {
+  background-image: none;
+  background-repeat: no-repeat;
+  border: none;
+  text-shadow: none;
+  border-radius: 3px; }
+
+.btn_fill_green {
+  background-color: #26a97a;
+  color: #fff; }
+  .btn_fill_green:hover, .btn_fill_green:focus, .btn_fill_green:active {
+    color: #fff; }
+
+.btn_fill_red {
+  background-color: #f16c6c;
+  color: #fff; }
+  .btn_fill_red:hover, .btn_fill_red:focus, .btn_fill_red:active {
+    color: #fff; }
+
+.btn_empty_green {
+  border: 1px solid #26a97a;
+  color: #26a97a;
+  background-color: #fff; }
+  .btn_empty_green:hover, .btn_empty_green:focus, .btn_empty_green:active {
+    color: #26a97a; }
+
+.btn_empty_gray {
+  border: 1px solid #c2c7c3;
+  color: #c8d0cf;
+  background-color: #fff; }
+  .btn_empty_gray:hover, .btn_empty_gray:focus, .btn_empty_gray:active {
+    color: #c8d0cf; }
+
+.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child,
+.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child,
+.btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
+  border-radius: 3px; }
+
+html {
+  font-size: 100%; }
+
+body {
+  font-family: "微軟雅黑體", "微软雅黑体", "微軟正黑體", "微软正黑体", "Arial"; }
+
+h1, h2, h3 {
+  margin: 0; }
+
+button {
+  outline: none;
+  border: none;
+  background-color: transparent; }
+
+a {
+  color: inherit; }
+  a:focus, a:hover {
+    outline: none;
+    color: inherit;
+    text-decoration: none; }
+
+.close {
+  text-shadow: 0 0; }
+
+.mask {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 300;
+  position: fixed;
+  top: 0; }
+
+/*2017/10/16合并后，要更改的css*/
+section .container-fluid, section .container {
+  margin-top: 48px;
+  margin-bottom: 50px; }
+
+.mem_header .pull-left {
+  margin-top: 16px;
+  margin-left: 13px; }
+  .mem_header .pull-left img {
+    height: 18px; }
+
+.mem_header .brand_middle {
+  color: #b5ead7;
+  font-size: 0.9375rem; }
+
+/*section*/
+body.slotBody {
+  background-color: #f1f3f2; }
+  body.slotBody section.game_list {
+    margin-bottom: 50px; }
+
+/*header搜尋框*/
+nav {
+  /*老虎機篩選列表*/ }
+  nav .navbar-header {
+    position: relative; }
+  nav .navbar-form.middle {
+    position: absolute;
+    width: 70%;
+    padding: 0;
+    bottom: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, 50%);
+    -ms-transform: translate(-50%, 50%);
+    transform: translate(-50%, 50%); }
+  nav .navbar-form {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    float: left;
+    border: 0;
+    margin: 0;
+    padding: 12px 0px 12px 0px; }
+  nav .search_wrapper {
+    width: 100%;
+    position: relative; }
+  nav .search_box {
+    height: 26px;
+    border-radius: 12.8px;
+    background-image: url(../img/slot/search_icon.png);
+    background-size: 16px 16px;
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    padding: 0 0 0 32px;
+    font-size: 0.875rem;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    width: 100%;
+    outline: 0; }
+    nav .search_box::-webkit-input-placeholder {
+      color: #b7bebb; }
+    nav .search_box:-ms-input-placeholder {
+      color: #b7bebb; }
+    nav .search_box::placeholder {
+      color: #b7bebb; }
+  nav .close_icon {
+    border: 1px solid transparent;
+    background-color: transparent;
+    display: inline-block;
+    vertical-align: middle;
+    outline: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 4px;
+    right: 20px; }
+    nav .close_icon:after {
+      content: "X";
+      display: block;
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      z-index: 1;
+      color: #babcba;
+      font-size: 1.125rem; }
+  nav .search_box:not(:valid) ~ .close_icon {
+    display: none; }
+  nav .filterBar {
+    position: relative;
+    z-index: 500;
+    background-color: #f1f3f2;
+    line-height: 30px;
+    display: block;
+    /*收藏按鈕*/ }
+    nav .filterBar img {
+      width: 13px;
+      vertical-align: initial; }
+    nav .filterBar li a {
+      padding: 0; }
+    nav .filterBar .dropdown {
+      text-align: left;
+      padding-left: 5px;
+      z-index: 3; }
+      nav .filterBar .dropdown .dtitle {
+        display: inline-block; }
+        nav .filterBar .dropdown .dtitle:nth-of-type(1) {
+          color: #e7851b;
+          font-size: 1rem; }
+        nav .filterBar .dropdown .dtitle:nth-of-type(2) {
+          color: #858b89;
+          font-size: 0.875rem; }
+      nav .filterBar .dropdown .ctrl_btn {
+        width: 20px; }
+        nav .filterBar .dropdown .ctrl_btn:active, nav .filterBar .dropdown .ctrl_btn:focus, nav .filterBar .dropdown .ctrl_btn:active:focus {
+          outline: none; }
+    nav .filterBar .money_icon button:active, nav .filterBar .money_icon button:focus, nav .filterBar .money_icon button:active:focus {
+      outline: none; }
+    nav .filterBar li.Collection a img {
+      height: 13px; }
+    nav .filterBar li.Collection a.active img {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      background: url(../img/slot/star_icon_s.png) no-repeat;
+      background-size: 100% 100%;
+      padding-left: 13px; }
+    nav .filterBar li.Collection span {
+      font-size: 0.875rem; }
+
+/*收藏區塊*/
+ul.Collection {
+  z-index: 400;
+  background-color: #ffffff;
+  display: none;
+  padding-top: 18px;
+  padding-bottom: 25px; }
+  ul.Collection .swiper-slide {
+    width: auto; }
+  ul.Collection li button {
+    border-radius: 4px;
+    border: solid 2px #d5dad5;
+    font-size: 0.875rem;
+    padding: 8px 10px;
+    color: #848e84; }
+    ul.Collection li button:active, ul.Collection li button:focus, ul.Collection li button:active:focus {
+      outline: none; }
+
+.dropdown.open ul {
+  position: absolute;
+  text-align: center;
+  z-index: 500;
+  min-width: 79px;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background-color: #e5ebe9;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  left: -9px;
+  font-size: 0.875rem; }
+  .dropdown.open ul a {
+    color: #6b6866; }
+  .dropdown.open ul li.active ul.sub_select {
+    display: block; }
+  .dropdown.open ul li ul.sub_select {
+    display: none;
+    background-color: #ffffff;
+    top: 0;
+    left: 100%;
+    height: auto;
+    min-width: 240px;
+    width: 90vw;
+    min-height: 312px;
+    font-size: 0.875rem; }
+    .dropdown.open ul li ul.sub_select li {
+      position: relative;
+      line-height: 3.27;
+      border-bottom: 1px solid #e5ebe9;
+      padding-left: 5px;
+      text-align: left;
+      /*篩選打勾鈕樣式*/
+      /*篩選打勾鈕*/ }
+      .dropdown.open ul li ul.sub_select li label:nth-of-type(1) {
+        font-weight: normal; }
+      .dropdown.open ul li ul.sub_select li label:nth-of-type(2) {
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        height: 12px;
+        width: 12px;
+        left: 80%; }
+      .dropdown.open ul li ul.sub_select li label:after {
+        border: 1px solid #ffffff;
+        border-top: none;
+        border-right: none;
+        content: "";
+        height: 4px;
+        left: 1px;
+        opacity: 0;
+        position: absolute;
+        top: 2px;
+        -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        width: 8px; }
+      .dropdown.open ul li ul.sub_select li input[type="checkbox"] {
+        display: none; }
+        .dropdown.open ul li ul.sub_select li input[type="checkbox"]:checked + label {
+          background-color: #66bb6a;
+          border-color: #66bb6a; }
+        .dropdown.open ul li ul.sub_select li input[type="checkbox"]:checked + label:after {
+          opacity: 1; }
+  .dropdown.open ul li a {
+    padding: 0;
+    line-height: 3.27;
+    /*子清單(遊戲類別)*/ }
+    .dropdown.open ul li a:hover,
+    .dropdown.open ul li a .active {
+      background-color: #ffffff; }
+
+.dropdown .dropdown-toggle {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+  .dropdown .dropdown-toggle:active {
+    outline: 0;
+    outline-offset: 0; }
+
+/*banner*/
+.slot_banner_section {
+  margin-top: 80px;
+  margin-bottom: 10.5px; }
+
+.slot_banner .swiper-slide img {
+  width: 100%; }
+
+.slot_banner .swiper-pagination {
+  width: auto;
+  right: 14px;
+  bottom: 9px;
+  left: auto; }
+  .slot_banner .swiper-pagination .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    opacity: 1; }
+  .slot_banner .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #ffde00; }
+
+#search_result {
+  border-bottom: 1px solid #5f645e;
+  position: relative;
+  padding: 10px 0;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  display: none; }
+  #search_result .close_icon {
+    position: absolute;
+    right: 10px;
+    top: 10px; }
+
+.game_list {
+  font-size: 0.875rem; }
+  .game_list a.active img {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background: url(../img/slot/star_icon_s.png) no-repeat;
+    background-size: 100% 100%;
+    padding-left: 12px; }
+  .game_list a {
+    font-size: 0.875rem; }
+  .game_list > .container {
+    margin-top: -48px; }
+  .game_list .game_listcontainer {
+    max-width: 570px;
+    margin-top: 10px;
+    padding: 0; }
+    .game_list .game_listcontainer .container, .game_list .game_listcontainer .container-fluid {
+      margin-top: 0;
+      margin-bottom: 0; }
+    .game_list .game_listcontainer .gabox {
+      max-width: 300px; }
+    .game_list .game_listcontainer .gabox:nth-child(odd) {
+      padding-right: 7.5px; }
+    .game_list .game_listcontainer .gabox:nth-child(even) {
+      padding-left: 7.5px; }
+    .game_list .game_listcontainer .game_content img {
+      width: 100%; }
+    .game_list .game_listcontainer .title {
+      background-color: #61af93;
+      color: #ffffff; }
+      .game_list .game_listcontainer .title > div {
+        padding-left: 3px; }
+        .game_list .game_listcontainer .title > div img {
+          margin-right: 3px; }
+      .game_list .game_listcontainer .title img {
+        width: 13px;
+        height: 13px; }
+        .game_list .game_listcontainer .title img.favorite {
+          vertical-align: top; }
+      .game_list .game_listcontainer .title button {
+        background-color: #73bfa4;
+        padding: 0;
+        border: 0;
+        width: 25px;
+        height: 25px; }
+      .game_list .game_listcontainer .title .game_name {
+        width: 80.5%;
+        overflow: hidden;
+        white-space: nowrap;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis; }
+    .game_list .game_listcontainer .lineHeight {
+      line-height: 25px; }
+    .game_list .game_listcontainer .btn_outline {
+      width: 45%;
+      padding: 6px 3px;
+      border-radius: 2px;
+      border: 1px solid #b0b8b5; }
+    .game_list .game_listcontainer .play_btn {
+      padding: 0 3.6% 10px;
+      font-size: 1rem;
+      margin-top: 9px;
+      text-align: center; }
+      .game_list .game_listcontainer .play_btn .pull-right {
+        background-color: #e79751;
+        color: #ffffff; }
+      .game_list .game_listcontainer .play_btn .pull-lrft {
+        border: 0; }
+  .game_list .game {
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    background-color: #ffffff;
+    margin-bottom: 9.5px;
+    vertical-align: top; }
+    .game_list .game .add_favorite i.active {
+      color: #F02664; }
+
+.slot_empty {
+  margin-top: 60px;
+  font-size: 0.875rem; }
+  .slot_empty .title {
+    margin-bottom: 15px; }
+
+.modal-open .filterBar {
+  display: none; }

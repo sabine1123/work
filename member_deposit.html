@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>存款</title>
+        <!-- 最新编译和最佳化的 CSS -->
+        <link rel="stylesheet" href="./lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+        
+        <!-- 选择性布景主题 -->
+        
+        <!-- 选择性 bootstrap -->
+        <!-- <link rel="stylesheet" href="./lib/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css"> -->
+        <link rel="stylesheet" href="./lib/Swiper-master/css/swiper.css">
+        <!-- Main css -->
+        <link rel="stylesheet" href="./css/Common.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="./css/popup.css" type="text/css" media="screen">        
+        <link rel="stylesheet" href="./css/member_deposit.css" type="text/css" media="screen">
+        
+        <!-- 选择性 jquery ui -->
+        <!-- <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
+      
+        <script src="./lib/jquery/jquery-3.2.1.min.js"></script>
+
+        <!-- jquery ui -->
+<!--         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css"> -->
+
+        <style>
+            .deposit{
+                background-color: #fff;
+            }
+            .deposit .header{
+                padding-bottom: 0;
+            }
+            .tab_warp{
+                background-color: #f1f3f2;
+                padding-top: 5px
+            }
+            .deposit_money{
+                position: relative;
+            }
+            .deposit_money span.error{
+                padding-top: 3px;
+                padding-bottom: 0px;
+                font-size: 12px;
+                line-height: 12px;
+                color: #f16c6c;
+                position: absolute;
+                left: 0px;
+                bottom: -15px;
+            }
+
+        </style>        
+
+    </head>
+<body class="deposit">
+    <nav class="navbar-default navbar-fixed-top" role="navigation">      
+        <div class="container-fluid">
+            <div class="row">
+                <div class="navbar-header">
+                    <!-- 上一页 -->
+                    <button type="button" class="navbar-toggle pull-left" onclick="history.go(-1)">
+                        <img style="width:19.5px;height:19.5px" src="img/member/pre_green_icon.png" alt="">
+                    </button>
+                    <a class="navbar-brand pull-right" href=""><img src="./img/icons/service_icon.png" alt="Customer"></a>
+                    <div class="deposit_title text-nowrap">
+                        <ul class="col-xs-4">
+                            <li><a href="member_withdraw.html">取款</a></li>
+                        </ul>
+                        <ul class="col-xs-4"> 
+                            <li class="active"><a href="member_deposit.html">存款</a></li>
+                        </ul>
+                        <ul class="col-xs-4">
+                            <li><a href="member_Transfer.html">转帐</a></li> 
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<!-- header -->
+<section class="header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12">
+                <div class="row">
+                    <a href="#">
+                      <img src="img/member/banner/images_01.jpg" alt="">
+                    </a>
+                  </div>
+            </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- tab -->
+  <section class="tabs">
+    <form action="" id="depositF">
+    <div class="container tab_warp">
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#ebank">网银</a></li>
+            <li><a data-toggle="tab" href="#online">在线支付</a></li>
+            <li><a data-toggle="tab" href="#weixin">微信</a></li>
+            <li><a data-toggle="tab" href="#alipay">支付宝</a></li>
+            <li><a data-toggle="tab" href="#qpay">QQ钱包</a></li>
+        </ul>
+    </div>
+    
+
+    <div class="tab-content">
+            
+        <!-- 网银 -->
+        <div id="ebank" class="tab-pane fade in active">
+            <div class="container">
+                <p class="balance">您当前钱包余额(¥):
+                    <span>33865</span><span>.00</span>
+                </p>    
+                <div class="form-group deposit_money clearfix">                                            
+                    <label for="" class="pull-left">
+                        <img src="img/member/save_money_icon.png" alt="">
+                        <span>存款金额</span>
+                    </label>                                        
+                    <input class="pull-right" type="text"  id="bann" name="checkisNum" placeholder="最小存款10元，单笔最高存款50000元">                         
+                </div>
+                <div class="SelectBank">
+                    <label for="" class="">                        
+                        <span>选择存入银行:</span>
+                    </label>
+                </div> 
+                <div class="row bank_row">
+                    <div class="col-xs-4 col-sm-4">
+                        <ul>
+                            <li><div class="radius"></div><img style="width:20px;height:20px" src="img/member/bank/cmb_logo.png" alt="cmb_logo">招商银行</li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-4 col-sm-4">
+                        <ul>
+                            <li><div class="radius"></div><img style="width:20px;height:20px" src="img/member/bank/credit_card_logo_CCB@1x.jpg" alt="cmb_logo">建设银行</li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-4 col-sm-4">
+                        <ul>
+                            <li><div class="radius"></div><img style="width:20px;height:20px" src="img/member/bank/credit_card_logo_CCB@1x.jpg" alt="cmb_logo">建设银行</li>
+                        </ul>
+                    </div>
+                            
+                    
+                </div>
+                <div class="row bank_row padding_top">
+
+                    <div class="col-xs-4 col-sm-4"> 
+                        <ul>
+                            <li><div class="radius"></div><img style="width:20px;height:20px" src="img/member/bank/cmb_logo.png" alt="cmb_logo">招商银行</li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-4 col-sm-4">
+                        <ul>
+                            <li><div class="radius"></div><img style="width:20px;height:20px" src="img/member/bank/credit_card_logo_CCB@1x.jpg" alt="cmb_logo">建设银行</li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-4 col-sm-4">
+                        <ul>
+                            <li><div class="radius"></div><img style="width:20px;height:20px" src="img/member/bank/credit_card_logo_CCB@1x.jpg" alt="cmb_logo">建设银行</li>
+                        </ul>
+                    </div>
+                                
+                </div>
+
+                <div class="deposit_footer">
+                    <div class="btn-group btn-group-justified">
+                        <div class="btn-group">
+                        <a href="javascript:;" class="btn btn-default btn_fill_green" role="button">确认提交</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+        <!-- 在线支付 -->
+        <div id="online" class="tab-pane fade">
+            <div class="container inner_tab">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#online_Channel_1">线路1</a></li>
+                    <li><a data-toggle="tab" href="#online_Channel_2">线路2</a></li>
+                    <li><a data-toggle="tab" href="#online_Channel_3">线路3</a></li>
+                    <li><a data-toggle="tab" href="#online_Channel_4">线路4</a></li>
+                </ul>
+            </div>
+            
+            <div class="tab-content">
+                <!-- online_Channel_1 -->
+                <div id="online_Channel_1" class="tab-pane fade in active">
+                    <div class="container">
+
+                        <div class="form-group deposit_money clearfix">                                            
+                            <label for="" class="pull-left">
+                                <img style="height: 20px;" src="img/member/save_money_icon.png" alt="">
+                                <span>存款金额</span>
+                            </label>                                        
+                            <input class="pull-right" type="text" name="checkisNum" placeholder="最小存款10元，单笔最高存款50000元">                         
+                        </div>
+
+                        <div class="SelectBank">
+                            <label for="" class="">                        
+                                <span>选择存入银行:</span>
+                            </label>
+                        </div>
+
+                        <div class="row bank_row">
+                            <div class="col-xs-4 col-sm-4">
+                                <ul>
+                                    <li><div class="radius"></div><img style="width:20px;height:20px" src="img/member/bank/cmb_logo.png" alt="cmb_logo">招商银行</li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-4 col-sm-4">
+                                <ul>
+                                    <li><div class="radius"></div><img style="width:20px;height:20px" src="img/member/bank/credit_card_logo_CCB@1x.jpg" alt="cmb_logo">建设银行</li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-4 col-sm-4">
+                                <ul>
+                                    <li><div class="radius"></div><img style="width:20px;height:20px" src="img/member/bank/credit_card_logo_CCB@1x.jpg" alt="cmb_logo">建设银行</li>
+                                </ul>
+                            </div>
+                                    
+                            
+                        </div>
+                        <div class="row bank_row padding_top">
+        
+                            <div class="col-xs-4 col-sm-4"> 
+                                <ul>
+                                    <li><div class="radius"></div><img style="width:20px;height:20px" src="img/member/bank/cmb_logo.png" alt="cmb_logo">招商银行</li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-4 col-sm-4">
+                                <ul>
+                                    <li><div class="radius"></div><img style="width:20px;height:20px" src="img/member/bank/credit_card_logo_CCB@1x.jpg" alt="cmb_logo">建设银行</li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-4 col-sm-4">
+                                <ul>
+                                    <li><div class="radius"></div><img style="width:20px;height:20px" src="img/member/bank/credit_card_logo_CCB@1x.jpg" alt="cmb_logo">建设银行</li>
+                                </ul>
+                            </div>
+                                        
+                        </div>
+                        
+
+                        <div class="deposit_footer">
+                            <div class="btn-group btn-group-justified">
+                                <div class="btn-group">
+                                <a href="javascript:;" class="btn btn-default btn_fill_green" role="button">确认提交</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- online_Channel_2 -->
+                <div id="online_Channel_2" class="tab-pane fade">
+                    <div class="container">
+
+                        <div class="form-group deposit_money clearfix">                                            
+                            <label for="" class="pull-left">
+                                <img style="height: 20px;" src="img/member/save_money_icon.png" alt="">
+                                <span>存款金额</span>
+                            </label>                                        
+                            <input class="pull-right" type="text" name="checkisNum" placeholder="最小存款10元，单笔最高存款50000元">                         
+                        </div>
+
+                        <div class="SelectBank">
+                            <label for="" class="">                        
+                                <span>选择存入银行:</span>
+                            </label>
+                        </div>
+
+                        <div class="row bank_row">
+                            <div class="col-xs-4 col-sm-4">
+                                <ul>
+                                    <li><div class="radius"></div><img style="width:20px;height:20px" src="img/member/bank/cmb_logo.png" alt="cmb_logo">招商银行</li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-4 col-sm-4">
+                                <ul>
+                                    <li><div class="radius"></div><img style="width:20px;height:20px" src="img/member/bank/credit_card_logo_CCB@1x.jpg" alt="cmb_logo">建设银行</li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-4 col-sm-4">
+                                <ul>
+                                    <li><div class="radius"></div><img style="width:20px;height:20px" src="img/member/bank/credit_card_logo_CCB@1x.jpg" alt="cmb_logo">建设银行</li>
+                                </ul>
+                            </div>
+                                    
+                            
+                        </div>
+                        <div class="row bank_row padding_top">
+        
+                            <div class="col-xs-4 col-sm-4"> 
+                                <ul>
+                                    <li><div class="radius"></div><img style="width:20px;height:20px" src="img/member/bank/cmb_logo.png" alt="cmb_logo">招商银行</li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-4 col-sm-4">
+                                <ul>
+                                    <li><div class="radius"></div><img style="width:20px;height:20px" src="img/member/bank/credit_card_logo_CCB@1x.jpg" alt="cmb_logo">建设银行</li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-4 col-sm-4">
+                                <ul>
+                                    <li><div class="radius"></div><img style="width:20px;height:20px" src="img/member/bank/credit_card_logo_CCB@1x.jpg" alt="cmb_logo">建设银行</li>
+                                </ul>
+                            </div>
+                                        
+                        </div>
+                        
+
+                        <div class="deposit_footer">
+                            <div class="btn-group btn-group-justified">
+                                <div class="btn-group">
+                                <a href="javascript:;" class="btn btn-default btn_fill_green" role="button">确认提交</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- online_Channel_3 -->
+                <div id="online_Channel_3" class="tab-pane fade">
+                    <div class="container">
+
+                        <div class="form-group deposit_money clearfix">                                            
+                            <label for="" class="pull-left">
+                                <img style="height: 20px;" src="img/member/save_money_icon.png" alt="">
+                                <span>存款金额</span>
+                            </label>                                        
+                            <input class="pull-right" type="text" name="checkisNum" placeholder="最小存款10元，单笔最高存款50000元">                         
+                        </div>
+
+                        <div class="SelectBank">
+                            <label for="" class="">                        
+                                <span>选择存入银行:</span>
+                            </label>
+                        </div>
+
+                        <div class="row bank_row">
+                            <div class="col-xs-4 col-sm-4">
+                                <ul>
+                                    <li><div class="radius"></div><img style="width:20px;height:20px" src="img/member/bank/cmb_logo.png" alt="cmb_logo">招商银行</li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-4 col-sm-4">
+                                <ul>
+                                    <li><div class="radius"></div><img style="width:20px;height:20px" src="img/member/bank/credit_card_logo_CCB@1x.jpg" alt="cmb_logo">建设银行</li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-4 col-sm-4">
+                                <ul>
+                                    <li><div class="radius"></div><img style="width:20px;height:20px" src="img/member/bank/credit_card_logo_CCB@1x.jpg" alt="cmb_logo">建设银行</li>
+                                </ul>
+                            </div>
+                                    
+                            
+                        </div>
+                        <div class="row bank_row padding_top">
+        
+                            <div class="col-xs-4 col-sm-4"> 
+                                <ul>
+                                    <li><div class="radius"></div><img style="width:20px;height:20px" src="img/member/bank/cmb_logo.png" alt="cmb_logo">招商银行</li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-4 col-sm-4">
+                                <ul>
+                                    <li><div class="radius"></div><img style="width:20px;height:20px" src="img/member/bank/credit_card_logo_CCB@1x.jpg" alt="cmb_logo">建设银行</li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-4 col-sm-4">
+                                <ul>
+                                    <li><div class="radius"></div><img style="width:20px;height:20px" src="img/member/bank/credit_card_logo_CCB@1x.jpg" alt="cmb_logo">建设银行</li>
+                                </ul>
+                            </div>
+                                        
+                        </div>
+                        
+
+                        <div class="deposit_footer">
+                            <div class="btn-group btn-group-justified">
+                                <div class="btn-group">
+                                <a href="javascript:;" class="btn btn-default btn_fill_green" role="button">确认提交</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- online_Channel_4 -->
+                <div id="online_Channel_4" class="tab-pane fade">
+                    <div class="container">
+
+                        <div class="form-group deposit_money clearfix">                                            
+                            <label for="" class="pull-left">
+                                <img style="height: 20px;" src="img/member/save_money_icon.png" alt="">
+                                <span>存款金额</span>
+                            </label>                                        
+                            <input class="pull-right" type="text" name="checkisNum" placeholder="最小存款10元，单笔最高存款50000元">                         
+                        </div>
+
+                        <div class="SelectBank">
+                            <label for="" class="">                        
+                                <span>选择存入银行:</span>
+                            </label>
+                        </div>
+
+                        <div class="row bank_row">
+                            <div class="col-xs-4 col-sm-4">
+                                <ul>
+                                    <li><div class="radius"></div><img style="width:20px;height:20px" src="img/member/bank/cmb_logo.png" alt="cmb_logo">招商银行</li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-4 col-sm-4">
+                                <ul>
+                                    <li><div class="radius"></div><img style="width:20px;height:20px" src="img/member/bank/credit_card_logo_CCB@1x.jpg" alt="cmb_logo">建设银行</li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-4 col-sm-4">
+                                <ul>
+                                    <li><div class="radius"></div><img style="width:20px;height:20px" src="img/member/bank/credit_card_logo_CCB@1x.jpg" alt="cmb_logo">建设银行</li>
+                                </ul>
+                            </div>
+                                    
+                            
+                        </div>
+                        <div class="row bank_row padding_top">
+        
+                            <div class="col-xs-4 col-sm-4"> 
+                                <ul>
+                                    <li><div class="radius"></div><img style="width:20px;height:20px" src="img/member/bank/cmb_logo.png" alt="cmb_logo">招商银行</li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-4 col-sm-4">
+                                <ul>
+                                    <li><div class="radius"></div><img style="width:20px;height:20px" src="img/member/bank/credit_card_logo_CCB@1x.jpg" alt="cmb_logo">建设银行</li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-4 col-sm-4">
+                                <ul>
+                                    <li><div class="radius"></div><img style="width:20px;height:20px" src="img/member/bank/credit_card_logo_CCB@1x.jpg" alt="cmb_logo">建设银行</li>
+                                </ul>
+                            </div>
+                                        
+                        </div>
+                        
+
+                        <div class="deposit_footer">
+                            <div class="btn-group btn-group-justified">
+                                <div class="btn-group">
+                                <a href="javascript:;" class="btn btn-default btn_fill_green" role="button">确认提交</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- 微信 -->
+        <div id="weixin" class="tab-pane fade">
+            <div class="container inner_tab">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#weixin_Channel_1">线路1</a></li>
+                    <li><a data-toggle="tab" href="#weixin_Channel_2">线路2</a></li>
+                    <li><a data-toggle="tab" href="#weixin_Channel_3">线路3</a></li>
+                    <li><a data-toggle="tab" href="#weixin_Channel_4">线路4</a></li>
+                </ul>
+            </div>
+            
+            <div class="tab-content">
+                <!-- weixin_Channel_1 -->
+                <div id="weixin_Channel_1" class="tab-pane fade in active">
+                    <div class="container">
+                        <div class="form-group deposit_money clearfix">                                            
+                            <label for="" class="pull-left">
+                                <img style="height: 20px;" src="img/member/save_money_icon.png" alt="">
+                                <span>存款金额</span>
+                            </label>                                        
+                            <input class="pull-right" type="text" name="checkisNum" placeholder="最小存款10元，单笔最高存款50000元">                         
+                        </div>
+
+                        <div class="deposit_footer">
+                            <div class="btn-group btn-group-justified">
+                                <div class="btn-group">
+                                <a href="javascript:;" class="btn btn-default btn_fill_green" role="button">确认提交</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- weixin_Channel_2 -->
+                <div id="weixin_Channel_2" class="tab-pane fade">
+                    <div class="container">
+                        <div class="form-group deposit_money clearfix">                                            
+                            <label for="" class="pull-left">
+                                <img style="height: 20px;" src="img/member/save_money_icon.png" alt="">
+                                <span>存款金额</span>
+                            </label>                                        
+                            <input class="pull-right" type="text" name="checkisNum" placeholder="最小存款10元，单笔最高存款50000元">                         
+                        </div>
+
+                        <div class="deposit_footer">
+                            <div class="btn-group btn-group-justified">
+                                <div class="btn-group">
+                                <a href="javascript:;" class="btn btn-default btn_fill_green" role="button">确认提交</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- weixin_Channel_3 -->
+                <div id="weixin_Channel_3" class="tab-pane fade">
+                    <div class="container">
+                        <div class="form-group deposit_money clearfix">                                            
+                            <label for="" class="pull-left">
+                                <img style="height: 20px;" src="img/member/save_money_icon.png" alt="">
+                                <span>存款金额</span>
+                            </label>                                        
+                            <input class="pull-right" type="text" name="checkisNum" placeholder="最小存款10元，单笔最高存款50000元">                         
+                        </div>
+
+                        <div class="deposit_footer">
+                            <div class="btn-group btn-group-justified">
+                                <div class="btn-group">
+                                <a href="javascript:;" class="btn btn-default btn_fill_green" role="button">确认提交</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- weixin_Channel_4 -->
+                <div id="weixin_Channel_4" class="tab-pane fade">
+                    <div class="container">
+                        <div class="form-group deposit_money clearfix">                                            
+                            <label for="" class="pull-left">
+                                <img style="height: 20px;" src="img/member/save_money_icon.png" alt="">
+                                <span>存款金额</span>
+                            </label>                                        
+                            <input class="pull-right" type="text" name="checkisNum" placeholder="最小存款10元，单笔最高存款50000元">                         
+                        </div>
+
+                        <div class="deposit_footer">
+                            <div class="btn-group btn-group-justified">
+                                <div class="btn-group">
+                                <a href="javascript:;" class="btn btn-default btn_fill_green" role="button">确认提交</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 支付宝 -->
+        <div id="alipay" class="tab-pane fade">
+            <div class="container inner_tab">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#alipay_Channel_1">线路1</a></li>
+                    <li><a data-toggle="tab" href="#alipay_Channel_2">线路2</a></li>
+                    <li><a data-toggle="tab" href="#alipay_Channel_3">线路3</a></li>
+                    <li><a data-toggle="tab" href="#alipay_Channel_4">线路4</a></li>
+                </ul>
+            </div>
+
+        <div class="tab-content">
+            <!-- alipay_Channel_1 -->
+            <div id="alipay_Channel_1" class="tab-pane fade in active">
+                <div class="container">
+                    <div class="form-group deposit_money clearfix">                                            
+                        <label for="" class="pull-left">
+                            <img style="height: 20px;" src="img/member/save_money_icon.png" alt="">
+                            <span>存款金额</span>
+                        </label>                                        
+                        <input class="pull-right" type="text" placeholder="最小存款10元，单笔最高存款50000元">                         
+                    </div>
+
+                    <div class="deposit_footer">
+                        <div class="btn-group btn-group-justified">
+                            <div class="btn-group">
+                            <a href="javascript:;" class="btn btn-default btn_fill_green" role="button">确认提交</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- alipay_Channel_2 -->
+            <div id="alipay_Channel_2" class="tab-pane fade">
+                <div class="container">
+                    <div class="form-group deposit_money clearfix">                                            
+                        <label for="" class="pull-left">
+                            <img style="height: 20px;" src="img/member/save_money_icon.png" alt="">
+                            <span>存款金额</span>
+                        </label>                                        
+                        <input class="pull-right" type="text" name="checkisNum" placeholder="最小存款10元，单笔最高存款50000元">                         
+                    </div>
+
+                    <div class="deposit_footer">
+                        <div class="btn-group btn-group-justified">
+                            <div class="btn-group">
+                            <a href="javascript:;" class="btn btn-default btn_fill_green" role="button">确认提交</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- alipay_Channel_3 -->
+            <div id="alipay_Channel_3" class="tab-pane fade">
+                <div class="container">
+                    <div class="form-group deposit_money clearfix">                                            
+                        <label for="" class="pull-left">
+                            <img style="height: 20px;" src="img/member/save_money_icon.png" alt="">
+                            <span>存款金额</span>
+                        </label>                                        
+                        <input class="pull-right" type="text" name="checkisNum" placeholder="最小存款10元，单笔最高存款50000元">                         
+                    </div>
+
+                    <div class="deposit_footer">
+                        <div class="btn-group btn-group-justified">
+                            <div class="btn-group">
+                            <a href="javascript:;" class="btn btn-default btn_fill_green" role="button">确认提交</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- alipay_Channel_4 -->
+            <div id="alipay_Channel_4" class="tab-pane fade">
+                <div class="container">
+                    <div class="form-group deposit_money clearfix">                                            
+                        <label for="" class="pull-left">
+                            <img style="height: 20px;" src="img/member/save_money_icon.png" alt="">
+                            <span>存款金额</span>
+                        </label>                                        
+                        <input class="pull-right" type="text" name="checkisNum" placeholder="最小存款10元，单笔最高存款50000元">                         
+                    </div>
+
+                    <div class="deposit_footer">
+                        <div class="btn-group btn-group-justified">
+                            <div class="btn-group">
+                            <a href="javascript:;" class="btn btn-default btn_fill_green" role="button">确认提交</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+        </div>
+        <!-- QQ钱包 -->
+        <div id="qpay" class="tab-pane fade">
+            <div class="container inner_tab">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#qpay_Channel_1">线路1</a></li>
+                    <li><a data-toggle="tab" href="#qpay_Channel_2">线路2</a></li>
+                    <li><a data-toggle="tab" href="#qpay_Channel_3">线路3</a></li>
+                    <li><a data-toggle="tab" href="#qpay_Channel_4">线路4</a></li>
+                </ul>
+            </div>
+
+            <div class="tab-content">
+                <!-- qpay_Channel_1 -->
+                <div id="qpay_Channel_1" class="tab-pane fade in active">
+                    <div class="container">
+                        <div class="form-group deposit_money clearfix">                                            
+                            <label for="" class="pull-left">
+                                <img style="height: 20px;" src="img/member/save_money_icon.png" alt="">
+                                <span>存款金额</span>
+                            </label>                                        
+                            <input class="pull-right" type="text" name="checkisNum" placeholder="最小存款10元，单笔最高存款50000元">                         
+                        </div>
+    
+                        <div class="deposit_footer">
+                            <div class="btn-group btn-group-justified">
+                                <div class="btn-group">
+                                <a href="javascript:;" class="btn btn-default btn_fill_green" role="button">确认提交</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+                <!-- qpay_Channel_2 -->
+                <div id="qpay_Channel_2" class="tab-pane fade">
+                    <div class="container">
+                        <div class="form-group deposit_money clearfix">                                            
+                            <label for="" class="pull-left">
+                                <img style="height: 20px;" src="img/member/save_money_icon.png" alt="">
+                                <span>存款金额</span>
+                            </label>                                        
+                            <input class="pull-right" type="text" name="checkisNum" placeholder="最小存款10元，单笔最高存款50000元">                         
+                        </div>
+    
+                        <div class="deposit_footer">
+                            <div class="btn-group btn-group-justified">
+                                <div class="btn-group">
+                                <a href="javascript:;" class="btn btn-default btn_fill_green" role="button">确认提交</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+                <!-- qpay_Channel_3 -->
+                <div id="qpay_Channel_3" class="tab-pane fade">
+                    <div class="container">
+                        <div class="form-group deposit_money clearfix">                                            
+                            <label for="" class="pull-left">
+                                <img style="height: 20px;" src="img/member/save_money_icon.png" alt="">
+                                <span>存款金额</span>
+                            </label>                                        
+                            <input class="pull-right" type="text" name="checkisNum" placeholder="最小存款10元，单笔最高存款50000元">                         
+                        </div>
+    
+                        <div class="deposit_footer">
+                            <div class="btn-group btn-group-justified">
+                                <div class="btn-group">
+                                <a href="javascript:;" class="btn btn-default btn_fill_green" role="button">确认提交</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+                <!-- qpay_Channel_4 -->
+                <div id="qpay_Channel_4" class="tab-pane fade">
+                    <div class="container">
+                        <div class="form-group deposit_money clearfix">                                            
+                            <label for="" class="pull-left">
+                                <img style="height: 20px;" src="img/member/save_money_icon.png" alt="">
+                                <span>存款金额</span>
+                            </label>                                        
+                            <input class="pull-right" type="text" name="checkisNum" placeholder="最小存款10元，单笔最高存款50000元">                         
+                        </div>
+    
+                        <div class="deposit_footer">
+                            <div class="btn-group btn-group-justified">
+                                <div class="btn-group">
+                                <a href="javascript:;" class="btn btn-default btn_fill_green" role="button">确认提交</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>  
+      </div>
+      </form>
+  </section>
+
+  
+
+ 
+
+  
+
+
+
+
+
+
+
+
+ <footer class="navbar-default navbar-fixed-bottom text-nowrap">
+    
+</footer>         
+  
+    <script src="./lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="./lib/jquery.validate/jquery.validate.min.js"></script>
+    <script src="./lib/jquery.blockUI.js"></script>
+
+    <script src="js/_component.js"></script>    
+    <script src="js/base.js"></script>    
+    <script src="js/object.js"></script>
+    <script src="js/validate.js"></script>
+
+    <script src = "./js/member_deposit.js"></script>
+        
+</body>
+</html>

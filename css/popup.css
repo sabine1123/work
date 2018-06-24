@@ -1,0 +1,388 @@
+@charset "UTF-8";
+.btn {
+  background-image: none;
+  background-repeat: no-repeat;
+  border: none;
+  text-shadow: none;
+  border-radius: 3px; }
+
+.btn_fill_green {
+  background-color: #26a97a;
+  color: #fff; }
+  .btn_fill_green:hover, .btn_fill_green:focus, .btn_fill_green:active {
+    color: #fff; }
+
+.btn_fill_red {
+  background-color: #f16c6c;
+  color: #fff; }
+  .btn_fill_red:hover, .btn_fill_red:focus, .btn_fill_red:active {
+    color: #fff; }
+
+.btn_empty_green {
+  border: 1px solid #26a97a;
+  color: #26a97a;
+  background-color: #fff; }
+  .btn_empty_green:hover, .btn_empty_green:focus, .btn_empty_green:active {
+    color: #26a97a; }
+
+.btn_empty_gray {
+  border: 1px solid #c2c7c3;
+  color: #c8d0cf;
+  background-color: #fff; }
+  .btn_empty_gray:hover, .btn_empty_gray:focus, .btn_empty_gray:active {
+    color: #c8d0cf; }
+
+.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child,
+.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child,
+.btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
+  border-radius: 3px; }
+
+html {
+  font-size: 100%; }
+
+body {
+  font-family: "微軟雅黑體", "微软雅黑体", "微軟正黑體", "微软正黑体", "Arial"; }
+
+h1, h2, h3 {
+  margin: 0; }
+
+button {
+  outline: none;
+  border: none;
+  background-color: transparent; }
+
+a {
+  color: inherit; }
+  a:focus, a:hover {
+    outline: none;
+    color: inherit;
+    text-decoration: none; }
+
+.close {
+  text-shadow: 0 0; }
+
+.mask {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 300;
+  position: fixed;
+  top: 0; }
+
+/*2017/10/16合并后，要更改的css*/
+section .container-fluid, section .container {
+  margin-top: 48px;
+  margin-bottom: 50px; }
+
+.mem_header .pull-left {
+  margin-top: 16px;
+  margin-left: 13px; }
+  .mem_header .pull-left img {
+    height: 18px; }
+
+.mem_header .brand_middle {
+  color: #b5ead7;
+  font-size: 0.9375rem; }
+
+.modal-content {
+  border-radius: 0;
+  border: 0;
+  -webkit-box-shadow: 0 0;
+  box-shadow: 0 0; }
+
+.modal-backdrop.in {
+  background-color: #fff;
+  z-index: 1010;
+  opacity: 1; }
+
+.popup_full_warp {
+  top: 50px;
+  background-color: #fff; }
+  .popup_full_warp .modal-dialog {
+    margin: 0 auto; }
+  .popup_full_warp .modal-content {
+    padding: 20px 12px; }
+    .popup_full_warp .modal-content .close_btn {
+      position: absolute;
+      top: -15px;
+      right: 0;
+      width: 45px;
+      height: 45px; }
+      .popup_full_warp .modal-content .close_btn img {
+        width: 13px; }
+  .popup_full_warp .p_header {
+    position: relative; }
+    .popup_full_warp .p_header .p_title {
+      font-size: 1.125rem;
+      color: #6c7270; }
+      .popup_full_warp .p_header .p_title .icon {
+        color: #bac1bf;
+        margin-right: 15px; }
+  .popup_full_warp .p_body {
+    font-size: 0.875rem; }
+    .popup_full_warp .p_body .sub_box {
+      margin-top: 28px; }
+      .popup_full_warp .p_body .sub_box .sub_title {
+        color: #44924b;
+        font-weight: bold; }
+      .popup_full_warp .p_body .sub_box .sub_content {
+        color: #5f645e;
+        line-height: 1.5rem; }
+        .popup_full_warp .p_body .sub_box .sub_content table {
+          width: 100%;
+          border: 1px solid #fff;
+          text-align: center;
+          margin-bottom: 10px; }
+          .popup_full_warp .p_body .sub_box .sub_content table thead th {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            background-color: #e1e5df;
+            border: 1px solid #d6dad4;
+            text-align: center; }
+          .popup_full_warp .p_body .sub_box .sub_content table tbody td {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border: 1px solid #d6dad4; }
+
+.login_popup {
+  display: none;
+  position: fixed;
+  bottom: 50px;
+  z-index: 500;
+  margin-bottom: -2px;
+  width: 100%;
+  bottom: 0;
+  z-index: 1200; }
+  .login_popup .popup_mask:before {
+    content: '';
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); }
+  .login_popup .login {
+    padding: 15px 10px;
+    background-color: #fff;
+    color: #353a38;
+    font-family: "微軟雅黑體", "微软雅黑体", "微軟正黑體", "微软正黑体", "Arial";
+    padding: 15px 10px; }
+    .login_popup .login .p_header img {
+      width: 13px; }
+    .login_popup .login .p_title {
+      font-size: 1rem; }
+      .login_popup .login .p_title .icon {
+        width: 2px;
+        height: 15px;
+        background-color: #26a97a;
+        margin-right: 8px; }
+      .login_popup .login .p_title .icon, .login_popup .login .p_title span {
+        display: inline-block;
+        vertical-align: middle; }
+    .login_popup .login .p_body {
+      font-size: 0.875rem; }
+    .login_popup .login .p_body {
+      margin-top: 8.4375%; }
+      .login_popup .login .p_body label {
+        margin-right: 20px;
+        min-width: 20.3125%; }
+        .login_popup .login .p_body label img {
+          width: 18px;
+          margin-right: 9px; }
+      .login_popup .login .p_body input {
+        width: 65%;
+        -webkit-appearance: none;
+        border: none; }
+      .login_popup .login .p_body input::-webkit-input-placeholder {
+        color: #c8d0cf; }
+      .login_popup .login .p_body input:-ms-input-placeholder {
+        color: #c8d0cf; }
+      .login_popup .login .p_body input::placeholder {
+        color: #c8d0cf; }
+      .login_popup .login .p_body .form_full {
+        border-bottom: 1px solid #c8d0cf;
+        padding-bottom: 5px;
+        position: relative;
+        margin-bottom: 25px; }
+        .login_popup .login .p_body .form_full span.error {
+          padding-top: 3px;
+          padding-bottom: 0px;
+          font-size: 0.875rem;
+          line-height: 12px;
+          color: #f16c6c;
+          position: absolute;
+          left: 0px;
+          bottom: -20px; }
+    .login_popup .login .p_footer {
+      font-size: 1rem; }
+      .login_popup .login .p_footer .btn_fill_green {
+        margin-bottom: 10px; }
+      .login_popup .login .p_footer .btn_half {
+        width: 95%; }
+      .login_popup .login .p_footer .btn-group-justified:nth-child(2) .btn_empty_gray {
+        margin-left: 4.66667%; }
+        .login_popup .login .p_footer .btn-group-justified:nth-child(2) .btn_empty_gray:hover, .login_popup .login .p_footer .btn-group-justified:nth-child(2) .btn_empty_gray:active {
+          color: #c8d0cf; }
+
+.game_popup {
+  display: none;
+  position: fixed;
+  bottom: 50px;
+  z-index: 500;
+  margin-bottom: -2px;
+  width: 100%; }
+  .game_popup .popup_mask:before {
+    content: '';
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); }
+  .game_popup .game {
+    color: #353a38;
+    font-family: "微軟雅黑體", "微软雅黑体", "微軟正黑體", "微软正黑体", "Arial";
+    padding: 15px 10px;
+    background-color: #fff; }
+    .game_popup .game .p_header img {
+      width: 13px; }
+    .game_popup .game .p_title {
+      font-size: 1rem; }
+      .game_popup .game .p_title .icon {
+        width: 2px;
+        height: 15px;
+        background-color: #26a97a;
+        margin-right: 8px; }
+      .game_popup .game .p_title .icon, .game_popup .game .p_title span {
+        display: inline-block;
+        vertical-align: middle; }
+    .game_popup .game .p_body {
+      font-size: 0.875rem; }
+  .game_popup .p_body {
+    margin-top: 15px; }
+    .game_popup .p_body .game_img {
+      margin-top: 20px; }
+      .game_popup .p_body .game_img .col-xs-3, .game_popup .p_body .game_img .col-sm-3 {
+        padding-left: 5px;
+        padding-right: 5px; }
+    .game_popup .p_body .game_history .sub_title, .game_popup .p_body .game_collect .sub_title {
+      color: #3e4443;
+      margin-top: 18px;
+      margin-bottom: 10px;
+      position: relative; }
+      .game_popup .p_body .game_history .sub_title:after, .game_popup .p_body .game_collect .sub_title:after {
+        content: '';
+        display: block;
+        width: 73.33333%;
+        height: 1px;
+        border-top: 1px dashed #9eafa9;
+        position: absolute;
+        top: 8px;
+        right: 0; }
+    .game_popup .p_body .game_history .game_list, .game_popup .p_body .game_collect .game_list {
+      width: 24%;
+      height: 23px;
+      line-height: 23px;
+      padding-left: 5px;
+      padding-right: 5px;
+      text-align: center;
+      border-radius: 20px;
+      color: #fff;
+      margin-right: 0.90909%; }
+    .game_popup .p_body .game_history .game_list {
+      background-color: #e98e17; }
+    .game_popup .p_body .game_collect .game_list {
+      background-color: #47b569; }
+
+.funds_popup {
+  display: none;
+  position: fixed;
+  bottom: 50px;
+  z-index: 500;
+  margin-bottom: -2px;
+  width: 100%; }
+  .funds_popup .popup_mask:before {
+    content: '';
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); }
+  .funds_popup .funds {
+    color: #353a38;
+    font-family: "微軟雅黑體", "微软雅黑体", "微軟正黑體", "微软正黑体", "Arial";
+    padding: 15px 10px;
+    background-color: #fff; }
+    .funds_popup .funds .p_header img {
+      width: 13px; }
+    .funds_popup .funds .p_title {
+      font-size: 1rem; }
+      .funds_popup .funds .p_title .icon {
+        width: 2px;
+        height: 15px;
+        background-color: #26a97a;
+        margin-right: 8px; }
+      .funds_popup .funds .p_title .icon, .funds_popup .funds .p_title span {
+        display: inline-block;
+        vertical-align: middle; }
+    .funds_popup .funds .p_body {
+      font-size: 0.875rem; }
+    .funds_popup .funds .funds_img {
+      margin-top: 17px; }
+      .funds_popup .funds .funds_img .funds_box {
+        width: 30%; }
+        .funds_popup .funds .funds_img .funds_box:nth-child(2) {
+          margin: auto 4.6875%; }
+    .funds_popup .funds .line {
+      height: 1px;
+      width: 100%;
+      background-color: #becbc6;
+      margin: 12px auto; }
+    .funds_popup .funds .funds_me .funds_box {
+      width: 17.1875%;
+      min-width: 55px;
+      min-height: 49px;
+      margin-right: 2.8125%; }
+      .funds_popup .funds .funds_me .funds_box > .row {
+        text-align: center;
+        border: 1px dashed #bfbfbf; }
+        .funds_popup .funds .funds_me .funds_box > .row .sub_title {
+          margin: 5px auto; }
+        .funds_popup .funds .funds_me .funds_box > .row img {
+          margin-top: 5px;
+          max-width: 32.72727%; }
+
+.popup_section {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  position: relative;
+  font-size: 0.875rem;
+  border-radius: 3px; }
+  .popup_section .popup_header {
+    background-color: #292b2a;
+    height: 30px;
+    line-height: 30px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px; }
+  .popup_section .popup_body {
+    padding-top: 25px;
+    padding: 25px 10px 15px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px; }
+    .popup_section .popup_body .popup_text {
+      line-height: 1.1;
+      min-height: 38px; }
+      .popup_section .popup_body .popup_text.noBtn {
+        min-height: 85px; }
+    .popup_section .popup_body .doBtn {
+      margin-top: 15px; }
+  .popup_section .pupup_close {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 3px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%); }
+    .popup_section .pupup_close img {
+      width: 16px;
+      border-radius: 50%; }
+  .popup_section p {
+    margin: 0; }

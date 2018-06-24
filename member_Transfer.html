@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>转帐</title>
+        <!-- 最新编译和最佳化的 CSS -->
+        <link rel="stylesheet" href="./lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+        
+        <!-- 选择性布景主题 -->
+        
+        <!-- 选择性 bootstrap -->
+        <!-- <link rel="stylesheet" href="./lib/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css"> -->
+        <link rel="stylesheet" href="./lib/Swiper-master/css/swiper.css">
+        <!-- Main css -->
+        <link rel="stylesheet" href="./lib/animate.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="./css/Common.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="./css/popup.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="./css/member_Transfer.css" type="text/css" media="screen">
+        
+        <!-- 选择性 jquery ui -->
+        <!-- <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
+      
+        <script src="./lib/jquery/jquery-3.2.1.min.js"></script>
+        <script>
+            function switchData() {
+            var sFrom = $(".amt_from").html();
+            var sTo = $(".amt_to").html();
+
+            $(".amt_from").html(sTo);
+            $(".amt_to").html(sFrom);
+
+        }
+        </script>
+        <!-- jquery ui -->
+<!--         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css"> -->
+        <style>
+            #tansferF{
+                position: relative;
+            }
+            #tansferF span.error{
+                padding-top: 3px;
+                padding-bottom: 0px;
+                font-size: 12px;
+                line-height: 12px;
+                color: #f16c6c;
+                position: absolute;
+                left: 0px;
+                bottom: -53px;
+            }
+            .Transfer .Transfer_content .Transfer_footer .btn_fill_green{
+                margin-top: 38px
+            }
+        </style>
+
+    </head>
+<body class="Transfer">
+    <nav class="navbar-default navbar-fixed-top" role="navigation">      
+        <div class="container-fluid">
+            <div class="row">
+                <div class="navbar-header">
+                    <!-- 上一页 -->
+                    <button type="button" class="navbar-toggle pull-left" onclick="history.go(-1)">
+                        <img style="width:19.5px;height:19.5px" src="img/member/pre_green_icon.png" alt="">
+                    </button>
+                    <a class="navbar-brand pull-right" href=""><img src="./img/icons/service_icon.png" alt="Customer"></a>
+                    <div class="Transfer_title text-nowrap">
+                        
+                        
+                        <ul class="col-xs-4"> 
+                            <li><a href="member_deposit.html">存款</a></li>
+                        </ul>
+                        <ul class="col-xs-4">
+                            <li class="active"><a href="member_Transfer.html">转帐</a></li> 
+                        </ul>
+                        <ul class="col-xs-4">
+                            <li><a href="member_withdraw.html">取款</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<!-- header -->
+<section class="header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 meter">
+                <div class="balance_title balance_padding text-center">
+                    <p class="balance">
+                        <img style="width:20px;height:20px;" src="img/member/deposit_money_icon.png" alt="deposit_money_icon">钱包余额
+                    </p>                    
+                    <p class="balance_num"><span>2288</span><span>.00</span></p> 
+                </div>
+                
+            </div>
+        </div>
+      </div>
+  </section>
+  
+<section class="Transfer_content">
+        <div class="container">
+            <!-- 从 -->
+            <div class="form-group deposit_money clearfix">     
+                                                    
+                <label for="" class="pull-left">
+                    <span>从</span>
+                </label>  
+                
+                <div class="choose_group no_pad text-center clearfix">
+                    <p class="choose_balance_button_title amt_from" balance-type="">
+                        钱包
+                        <span>2288</span><span>.00</span>
+                    </p>
+                    <div class="pull-right">
+                        <button data-target="#choose_balance" data-toggle="modal" onclick="_trans_type = 0;">
+                            <div class="glyphicon glyphicon-menu-right " aria-hidden="true"></div>
+                        </button>
+                    </div>
+                </div>                                      
+            </div>
+
+            <div class="Transfer_logo text-center">
+                <img style="width:39px;" src="img/member/refresh_icon.png" alt="Transfer_logo" onclick="switchData();">
+            </div>
+
+            <!-- 到 -->
+            <div class="form-group deposit_money clearfix">     
+                                                    
+                <label for="" class="pull-left">
+                    <span>到</span>
+                </label>  
+                
+                <div class="choose_group no_pad text-center clearfix">
+                        <p class="choose_balance_button_title amt_to" balance-type="">
+                                <!-- 钱包余额
+                                <span>2288</span><span>.00</span> -->
+                        </p>
+                    <div class="pull-right">
+                        <button data-target="#choose_balance" data-toggle="modal" onclick="_trans_type = 1;">
+                            <div class="glyphicon glyphicon-menu-right " aria-hidden="true"></div>
+                        </button>
+                    </div>
+                </div>                                      
+            </div>
+            
+            <div class="form-group deposit_money clearfix">  
+                <form action="" id="tansferF">                                
+                    <label for="" class="pull-left">
+                        <span>¥</span>
+                        <span class="Transfer_num">转账金额</span>
+                    </label>
+                    <input class="pull-right" type="text" name="checkisInt">
+                </form>                                                              
+            </div>
+
+        </div>
+
+        <div class="Transfer_footer">
+            <div class="btn-group btn-group-justified">
+                <div class="btn-group">
+                <a href="javascript:;" class="btn btn-default btn_fill_green" role="button">确定转账</a>
+                </div>
+            </div>
+        </div>
+
+</section>
+
+  
+
+ 
+
+  
+
+
+
+
+
+
+
+
+ <footer class="navbar-default navbar-fixed-bottom text-nowrap">
+    
+</footer>         
+
+  <!-- 选择余额 -->
+  <div class="modal animated fadeInRight choose_balance" id="choose_balance">
+        <div class="modal-dialog choose_dialog">
+          <div class="modal-content choose_content">
+                <div class="modal-header  member_header choose_header">
+                   <!-- 上一页 -->
+                   <button type="button" class="pull-left" data-dismiss="modal" aria-hidden="true" id="choose_balance_close_btn"><img src="img/member/pre_gray_icon.png">          
+                   </button>
+                    <!-- 客服 -->
+                    <a class="navbar-brand pull-right" href=""><img src="./img/icons/service_icon.png" alt="Customer"></a>
+                </div>
+                <!--  -->
+                
+                <!--  -->
+                <div class="modal-body choose_body">
+                    <div class="container">
+                        <div style="padding:10px 0;" class="row text-center">
+                            <button class="reload"><img style="width:36px;" src="img/member/reload_icon.png"></button>
+                        </div>
+                        <div class="balance_footer">
+                        <div class="row" id="selectBankTab">
+                            <ul class="ul_account">
+                                <li data-balance="1"><span class="title">钱包</span><span class="amount">2200.00</span></li>
+                                <li data-balance="2"><span class="title">PT</span><span class="amount">2200.00</span></li>
+                                <li data-balance="3"><span class="title">AG</span><span class="amount">2200.00</span></li>
+                                <li data-balance="4"><span class="title">MG</span><span class="amount">2200.00</span></li>
+                                <li data-balance="5"><span class="title">BBIN</span><span class="amount">2200.00</span></li>
+                                <li data-balance="6"><span class="title">DT</span><span class="amount">2200.00</span></li>
+                                <li data-balance="7"><span class="title">HABA</span><span class="amount">2200.00</span></li>
+                                <li data-balance="8"><span class="title">沙巴</span><span class="amount">2200.00</span></li>
+                                <li data-balance="9"><span class="title">TTG</span><span class="amount">2200.00</span></li>
+                                <li data-balance="10"><span class="title">BS</span><span class="amount">2200.00</span></li>
+                                <li data-balance="11"><span class="title">PNG</span><span class="amount">2200.00</span></li>
+                            </ul> 
+
+                            <div class="text-center">
+                                <a href="javascript:;" class="btn btn-default btn_fill_green" role="button">我要充值</a>
+                            </div>
+                        
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+    <!--         <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+    <script src="./lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="./lib/jquery.validate/jquery.validate.min.js"></script>
+    <script src="./lib/jquery.blockUI.js"></script>
+    <script src="./lib/Swiper-master/js/swiper.min.js"></script>
+
+    <script src="js/_component.js"></script>    
+    <script src="js/base.js"></script>    
+    <script src="js/object.js"></script>
+    <script src="js/validate.js"></script>
+        
+
+        <script type="text/javascript">
+        
+        var SideNav = $(".SideNav");
+        var active = "active";
+        var hideDelay = true;
+
+
+    var _trans_type = 0;
+
+    function addListenerToBanklis () {
+        $("#selectBankTab ul li").on("click", function (e) {
+            var title = $(this).find('.title').text();
+            var amount = $(this).find('.amount').text();
+            var balance_value =  $(this).attr('data-balance');
+          
+        
+          $('#choose_balance_close_btn').trigger('click');
+        //   var balance_num_el = $('.balance_num').html();
+        //   $(balance_num_el).appendTo(".choose_balance_button_title");
+        //   $('.choose_balance_button_title')
+        //   $('.choose_balance_button_title').html(title + amount);
+        //   $('.choose_balance_button_title').attr('data-balance', balance_value);
+        });
+      }
+
+      
+      
+$(document).ready(function () {
+
+    setTtansferValid();
+    // initial
+    addListenerToBanklis();
+    // console.log( $('.balance_num').text() );
+    var r = $('.balance_num').html();
+    var e = $('.choose_balance_button_title').html()
+
+    // $('.balance_num').append( $('.choose_balance_button_title').children() );
+
+    // $('.choose_balance_button_title').append( $('.balance_num').children() )
+    
+    $('footer').html(el_footer);
+    $('body').after(el_popupBox);
+    baseCtrl();
+    /**/
+    // for close the #choose_bank animation
+        $('#choose_balance').on('hide.bs.modal',function(e){
+            
+        if(hideDelay){
+          $('#choose_balance .modal-content').removeClass('animated fadeInRight').addClass('animated fadeOutRight');
+          hideDelay = false;
+           setTimeout(function(){
+               
+             $('#choose_balance').modal('hide');
+             $('#choose_balance .modal-content').removeClass('animated fadeOutRight').addClass('animated fadeInRight');
+           },700);
+          return false;
+        }
+
+            hideDelay = true;
+            return true;
+      });
+    
+      $('#choose_balance .ul_account li').on("click",function(){
+        var sTitle = $(this).children(".title").html();
+        var sAmt = $(this).children(".amount").html();
+        var sID = $(this).attr("data-balance");
+
+        if (_trans_type == 0) {
+            //from
+            $(".amt_from").html(sTitle+"    <span>"+sAmt+"</span><span>.00</span>");
+            //$(".amt_from").attr("balance-type",sID);
+            if (sID != "1") {
+                //not main, set amt_to become main
+                var obj = $('#choose_balance .ul_account li[data-balance="1"]');
+                $(".amt_to").html($(obj).children(".title").html()+"    <span>"+$(obj).children(".amount").html()+"</span><span>.00</span>");
+                //$(".amt_to").attr("balance-type",$(obj).attr("data-balance"));
+            }else{
+                //main, clear amt_to
+                $(".amt_to").html("");
+                //$(".amt_to").attr("balance-type","");
+            }
+
+        } else {
+            //to
+            $(".amt_to").html(sTitle+"    <span>"+sAmt+"</span><span>.00</span>");
+            //$(".amt_to").attr("balance-type",sID);
+            if (sID != "1") {
+                //not main, set amt_from become main
+                var obj = $('#choose_balance .ul_account li[data-balance="1"]');
+                $(".amt_from").html($(obj).children(".title").html()+"    <span>"+$(obj).children(".amount").html()+"</span><span>.00</span>");
+                //$(".amt_from").attr("balance-type",$(obj).attr("data-balance"));
+            }else{
+                //main, clear amt_from
+                $(".amt_from").html("");
+                //$(".amt_from").attr("balance-type","");
+            }
+
+        }
+        console.log("click="+sTitle+" "+sAmt);
+        console.log("type="+_trans_type);
+        
+      });
+  
+});
+        </script>
+
+
+</body>
+</html>

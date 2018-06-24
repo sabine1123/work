@@ -1,0 +1,22 @@
+{
+  "name": "duole",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://220.135.202.221:3000/shawn.hsu/duole.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-compass": "^2.1.0",
+    "gulp-less": "^3.3.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-watch-sass": "^1.2.4"
+  }
+}

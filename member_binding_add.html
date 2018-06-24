@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="./lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+
+      <!-- Common css -->
+      <link rel="stylesheet" href="./lib/animate.css" type="text/css" media="screen">
+      <link rel="stylesheet" href="./css/Common.css" type="text/css" media="screen">
+      <link rel="stylesheet" href="./css/popup.css" type="text/css" media="screen">
+
+
+      <link rel="stylesheet" href="./css/member_binding_add.css" type="text/css" media="screen">      
+      <script src="./lib/jquery/jquery-3.2.1.min.js"></script>
+
+
+      <title>多乐</title>
+  </head>
+
+  <body>
+
+    <!-- header -->
+    <div class="container">
+      <nav class="navbar-default navbar-fixed-top mem_header" role="navigation">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="navbar-header">
+              <button type="button" class="pull-left" onclick="history.go(-1)">
+                 <img src="img/member/pre_green_icon.png">          
+              </button>
+        
+              <!-- 标题 -->
+              <div class="navbar-brand brand_middle">我的银行卡</div>
+              <!-- 客服 -->
+              <a class="navbar-brand pull-right" href=""><img src="./img/icons/service_icon.png" alt="Customer"></a>
+            </div>
+          </div>
+          </div>    
+      </nav>
+    </div>
+
+    <!-- 侧边拦 -->
+    <div class="SideNav text-nowrap"></div>
+
+    <section>
+      <div class="container-fluid">
+            <!-- banner -->
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 ">
+                <div class="row member_binding_add_banner">
+                  <img src="img/member/banner/images_02.jpg" alt="" class="img-responsive center-block">  
+                </div>
+              </div>
+            </div>
+      </div>
+    </section>
+    <section class="member_binding_add">
+      <form action="" id="bindingF">      
+        <div class="container">
+          <div class="row">
+            <ul class="list col-xs-12 col-sm-12">
+              <li class="col-xs-12 col-sm-12 clearfix">
+                <span class="icon col-xs-1 col-sm-2">
+                  <img src="./img/member/name_green_icon.png" alt="">
+                </span>
+                <span class="title col_2plus col-sm-3">我的姓名</span>
+                <span class="value col-xs-8 col-sm-6">班**</span>
+              </li>
+              <li class="col-xs-12 col-sm-12 clearfix">
+                <span class="icon col-xs-1 col-sm-2">
+                  <img src="./img/member/my_bank_icon.png" alt="">
+                </span>
+                <span class="title col_2plus col-sm-3">我的银行</span>
+                <span class="value col-xs-3 col-sm-6"></span>
+                <div class="choose_group no_pad pull-right">
+                  <button data-target="#choose_bank" data-toggle="modal"><span class='choose_bank_button_title'>请选择</span><div class="glyphicon glyphicon-menu-right" aria-hidden="true"></div></button>
+                </div>
+              </li>
+              <li class="col-xs-12 col-sm-12 clearfix">
+                <span class="icon col-xs-1 col-sm-2">
+                  <img src="./img/member/credit_card_icon.png" alt="">
+                </span>
+                <span class="title col_2plus col-sm-3">我的卡号</span>
+                <span class="value col-xs-8 col-sm-6"><input type="text" name="checkBankCardNo"></span>
+              </li>
+              <li class="col-xs-12 col-sm-12 clearfix">
+                <span class="icon col-xs-1 col-sm-2">
+                  <img src="img/member/province_icon.png" alt="">
+                </span>
+                <span class="title col-xs-3 col-sm-3">开户行省市</span>
+                <!-- <span class="value col-xs-7 col-sm-6">开户行省市户行省市<div class="glyphicon glyphicon-menu-right" aria-hidden="true"></div></span> -->
+                <div class="choose_group no_pad choose_city_group pull-right">
+                  <button data-target="#choose_city" data-toggle="modal" onclick="handleClickSelectCity()"><span class='choose_city_button_title'>请选择</span><div class="glyphicon glyphicon-menu-right" aria-hidden="true" ></div></button>
+                </div>
+              </li>
+              <li class="col-xs-12 col-sm-12 clearfix">
+                <span class="icon col-xs-1 col-sm-2">
+                  <img src="./img/member/location_icon.png" alt="">
+                </span>
+                <span class="title col_2plus col-sm-3">银行地址</span>
+                <span class="value col-xs-8 col-sm-3"><input type="text"></span>
+              </li>
+            </ul>
+            <div class="col-xs-12 col-sm-12 button_group m_top">
+              <button class="btn_fill_green btn col-xs-12 col-sm-12" id="sBindingAdd">确认添加</button>
+            </div>
+
+          </div>
+        </div>
+      </form>
+    </section>
+     
+
+    <footer class="navbar-default navbar-fixed-bottom text-nowrap">
+    </footer> 
+
+    <!-- 选择开户行省市 -->
+    <div class="modal animated fadeInRight choose_city" id="choose_city">
+      <div class="modal-dialog choose_dialog">
+        <div class="modal-content choose_content">
+          <div class="modal-header  member_header choose_header">
+            <button type="button" class="pull-left" data-dismiss="modal" data-province='' data-city='' aria-hidden="true" onclick="initAllTab()"><img src="img/member/pre_gray_icon.png">
+            </button>
+            <span class="modal-title">开户行省市</span>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="row">
+                <ul class="nav nav-tabs tab_noborder">
+                  <li class="active"><a data-province=''>请选择</a></li>
+                </ul>
+                <div class="tab-content">
+                  <div id="selectProvinceTab" class="tab-pane fade in active">
+                    <ul class="list col-xs-12 col-sm-12">
+                      <!-- <li class="col-xs-12 col-sm-12 clearfix"></li> -->
+                    </ul>
+<!--                     <div class="button_group col-xs-12 col-sm-12 clearfix">
+                      <button class="btn btn_fill_green col-xs-12 col-sm-12 clearfix">
+                        下一步
+                      </button>
+                    </div> -->
+                  </div>
+                  <div id="selectCityTab" class="tab-pane fade">
+                    <ul class="list col-xs-12 col-sm-12">
+                      <!-- <li class="col-xs-12 col-sm-12 clearfix"></li> -->
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <!-- 选择银行 -->
+    <div class="modal animated fadeInRight choose_bank" id="choose_bank">
+      <div class="modal-dialog choose_dialog">
+        <div class="modal-content choose_content">
+          <div class="modal-header  member_header choose_header">
+            <button type="button" class="pull-left" data-dismiss="modal" aria-hidden="true" id="choose_bank_close_btn"><img src="img/member/pre_gray_icon.png">          
+            </button>
+            <span class="modal-title" data-bank=''>选择银行</span>
+          </div>
+          <div class="modal-body choose_body">
+            <div class="container">
+              <div class="row" id="selectBankTab">
+                <ul class="list col-xs-12 col-sm-12">
+                  <li class="col-xs-12 col-sm-12 clearfix" data-bank="1">北京银行</li>                  
+                  <li class="col-xs-12 col-sm-12 clearfix" data-bank="2">广东发展银行</li>                  
+                  <li class="col-xs-12 col-sm-12 clearfix" data-bank="4">广州市商业银行</li>                  
+                  <li class="col-xs-12 col-sm-12 clearfix" data-bank="5">华夏银行</li>                  
+                  <li class="col-xs-12 col-sm-12 clearfix" data-bank="6">交通银行</li>                  
+                  <li class="col-xs-12 col-sm-12 clearfix" data-bank="7">民生银行</li>                  
+                  <li class="col-xs-12 col-sm-12 clearfix" data-bank="8">平安银行</li>                  
+                  <li class="col-xs-12 col-sm-12 clearfix" data-bank="9">浦发发展银行</li>                  
+                  <li class="col-xs-12 col-sm-12 clearfix" data-bank="10">上海农村商业银行</li>               
+                  <li class="col-xs-12 col-sm-12 clearfix" data-bank="11">深圳发展银行</li>                  
+                  <li class="col-xs-12 col-sm-12 clearfix" data-bank="14">兴业银行</li>                  
+                  <li class="col-xs-12 col-sm-12 clearfix" data-bank="15">邮政储蓄</li>                  
+                  <li class="col-xs-12 col-sm-12 clearfix" data-bank="16">招商银行</li>                  
+                  <li class="col-xs-12 col-sm-12 clearfix" data-bank="17">中国工商银行</li>                  
+                  <li class="col-xs-12 col-sm-12 clearfix" data-bank="18">中国光大银行</li>                  
+                  <li class="col-xs-12 col-sm-12 clearfix" data-bank="19">中国建设银行</li>                  
+                  <li class="col-xs-12 col-sm-12 clearfix" data-bank="20">中国农业银行</li>                  
+                  <li class="col-xs-12 col-sm-12 clearfix" data-bank="21">中国银行</li>                  
+                  <li class="col-xs-12 col-sm-12 clearfix" data-bank="22">中信银行</li>                  
+                  <li class="col-xs-12 col-sm-12 clearfix" data-bank="23">北京农村商业银行</li>              
+                  <li class="col-xs-12 col-sm-12 clearfix" data-bank="25">上海银行</li>                  
+                  <li class="col-xs-12 col-sm-12 clearfix" data-bank="28">渤海银行</li>                  
+                  <li class="col-xs-12 col-sm-12 clearfix" data-bank="29">南京银行</li>                  
+                  <li class="col-xs-12 col-sm-12 clearfix" data-bank="32">汇丰银行</li>                  
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <script src="./lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="./lib/jquery.validate/jquery.validate.min.js"></script>
+    <script src="./lib/jquery.blockUI.js"></script>
+
+    <script src="js/_component.js"></script>    
+    <script src="js/base.js"></script>    
+    <script src="js/object.js"></script>
+    <script src="js/validate.js"></script>
+
+    <script>
+
+      /*变数区*/
+      var SideNav = $(".SideNav");
+      var active = "active";
+      var hideDelay = true;
+
+      function handleClickSelectCity(){
+        genProvincelis();
+        addListenerToProvincelis();
+      }
+
+      function initAllTab () {
+        setTimeout(function () {
+          $(".choose_city .tab-pane").removeClass("in active");
+          $(".choose_city .nav-tabs li").removeClass("active");
+          $(".choose_city .tab-pane:nth-child(1)").addClass("in active");
+          $(".choose_city .nav-tabs li:nth-child(1)").addClass("active");
+
+          // restore the tab title
+          $(".choose_city .nav-tabs li a").html("");
+          $(".choose_city .nav-tabs li:nth-child(1) a").html("请选择");
+          // remove the second tab
+          $(".choose_city .nav-tabs li:nth-child(2)").remove()
+        }, 500);
+        $('#choose_city li').unbind('click');
+
+      }
+
+      function toCityTab (e) {
+        $(".choose_city .tab-pane").removeClass("in active");
+        $(".choose_city .nav-tabs li").removeClass("active");
+        $(".choose_city .tab-pane:nth-child(2)").addClass("in active");
+        $(".choose_city .nav-tabs li:nth-child(2)").addClass("active");
+
+        var province_value = $(e.target).attr('data-value');
+        // 将选的省塞进去
+        $(".choose_city .nav-tabs li:nth-child(1) a").html($(e.target).html()).attr('data-province',province_value);
+        // add the second tab
+        $(".choose_city .nav-tabs").append("<li class='active'><a>请选择</a></li>");
+        addListenerToCitylis();
+      }
+
+      function genProvincelis () {
+        $("#selectProvinceTab .list").html("")
+        var opts = [
+          { label: "北京", value: 1 },
+          { label: "天津", value: 2 }
+        ];
+
+        for (var i = 0; i < opts.length; i++) {
+          $("#selectProvinceTab .list").append("<li class='col-xs-12 col-sm-12 clearfix' data-value='"+opts[i].value+"'>"+opts[i].label+"</li>");
+        }
+      }
+
+      function genCitylis (e) {
+        // @@TODO
+        // 1. send $(e.target).attr(data-value) in API and will get city lis
+        // 2. turn city lis into list
+        $("#selectCityTab .list").html("");
+
+        var opts = [
+          { label: "市区ㄧ", value: 1 },
+          { label: "市区二", value: 2 }
+        ];
+
+        for (var i = 0; i < opts.length; i++) {
+          $("#selectCityTab .list").append("<li class='col-xs-12 col-sm-12 clearfix' data-value='"+opts[i].value+"'>"+opts[i].label+"</li>");
+        }
+
+      }
+
+      function addListenerToProvincelis () {
+        $("#selectProvinceTab .list li").on("click", function (e) {
+          genCitylis(e);
+          toCityTab(e);
+        })
+      }
+
+      function addListenerToCitylis () {
+        $("#selectCityTab .list li").on("click", function (e) {
+          // 1. get the province value and city value
+          // 2. return to the page
+          var province = $('.choose_city .nav-tabs li:nth-child(1) a').html();
+          var province_value = $(".choose_city .nav-tabs li:nth-child(1) a").attr('data-province');
+          var city = $(e.target).html();
+          var city_value = $(e.target).attr('data-value');
+
+          initAllTab();
+          $('.choose_city_button_title').html(province+"省"+city+"市");
+          $('.choose_city_button_title').attr('data-province',province_value);
+          $('.choose_city_button_title').attr('data-city',city_value);
+          $('#choose_city').modal('hide');
+        })
+      }
+
+
+      function initBankTab () {
+        setTimeout(function () {
+          $(".choose_city .tab-pane").removeClass("in active");
+          $(".choose_city .nav-tabs li").removeClass("active");
+          $(".choose_city .tab-pane:nth-child(1)").addClass("in active");
+          $(".choose_city .nav-tabs li:nth-child(1)").addClass("active");
+
+          // restore the tab title
+          $(".choose_city .nav-tabs li a").html("");
+          $(".choose_city .nav-tabs li:nth-child(1) a").html("请选择");
+          // remove the second tab
+          $(".choose_city .nav-tabs li:nth-child(2)").remove()
+        }, 500);
+        $('#choose_city li').unbind('click');
+
+      }
+
+      function addListenerToBanklis () {
+        $("#selectBankTab .list li").on("click", function (e) {
+          var bank = $(e.target).html();
+          var bank_value = $(e.target).attr('data-bank');
+          $('#choose_bank_close_btn').trigger('click');
+          $('.choose_bank_button_title').html(bank);
+          $('.choose_bank_button_title').attr('data-bank', bank_value);
+        })
+      }
+
+      
+
+      /*--*/
+      // for close the #choose_bank animation
+      $('#choose_bank').on('hide.bs.modal',function(e){
+        
+        if(hideDelay){
+          $('#choose_bank .modal-content').removeClass('animated fadeInRight').addClass('animated fadeOutRight');
+          hideDelay = false;
+           setTimeout(function(){
+             $('#choose_bank').modal('hide');
+             $('#choose_bank .modal-content').removeClass('animated fadeOutRight').addClass('animated fadeInRight');
+           },300);
+          return false;
+        }
+        hideDelay = true;
+        return true;
+      });
+
+      // for close the $choose_city animation
+      $('#choose_city').on('hide.bs.modal',function(e){
+        if(hideDelay){
+          $('#choose_city .modal-content').removeClass('animated fadeInRight').addClass('animated fadeOutRight');
+          hideDelay = false;
+           setTimeout(function(){
+             $('#choose_city').modal('hide');
+             $('#choose_city .modal-content').removeClass('animated fadeOutRight').addClass('animated fadeInRight');
+           },300);
+          return false;
+        }
+        hideDelay = true;
+        return true;
+      });
+
+      $(document).ready(function(){
+
+        setBindingValid();
+        //choose bank
+        addListenerToBanklis();
+
+        $('#sBindingAdd').on('click',function(){
+         
+          _showPop('已送出申请');
+          
+          // _showPopBtnCallback('先完成个人资料','前去填写资料', function(){
+          //   location.href ='./member_info.html';
+          // });
+
+          // _showPopBtnWithCloseCallback('先完成个人资料','前去填写资料', function(){
+          //   location.href ='./member_info.html';
+          // });          
+        });
+
+        $('footer').html(el_footer);
+        $('body').after(el_popupBox);
+        $('body').after(el_popupBox); 
+        baseCtrl(); 
+
+
+      }); // end of document ready
+    </script>
+
+  </body>
+</html>

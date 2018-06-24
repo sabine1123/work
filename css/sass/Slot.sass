@@ -1,0 +1,440 @@
+@import "layout/_layout.sass"
+
+/*section*/
+body.slotBody
+  background-color: #f1f3f2
+  section.game_list
+    
+    margin-bottom: 50px
+    
+.stop
+  pointer-events:none  
+
+ 
+
+/*header搜尋框*/
+nav
+  .navbar-header
+    position: relative
+  
+  .navbar-form.middle
+    position: absolute
+    width: 70%
+    padding: 0
+    bottom: 50%
+    left: 50%
+    transform: translate(-50%,50%)
+  
+  .navbar-form
+    box-shadow: none
+    float: left
+    border: 0
+    margin: 0
+    padding: 12px 0px 12px 0px
+  
+   
+  .search_wrapper 
+    width: 100%
+    position: relative
+
+  .search_box 
+    &::placeholder 
+      color: #b7bebb
+    
+    height: 26px
+    border-radius: 12.8px
+    background-image: url(../img/slot/search_icon.png)
+    background-size: 16px 16px
+    background-position: 10px center
+    background-repeat: no-repeat
+    
+    padding: 0 0 0 32px
+    font-size: $font_size_base
+    -webkit-transition: all 0.2s
+    -moz-transition: all 2s
+    transition: all 0.2s
+    width: 100%
+    outline: 0
+
+  .close_icon 
+    border: 1px solid transparent
+    background-color: transparent
+    display: inline-block
+    vertical-align: middle
+    outline: 0
+    cursor: pointer
+    position: absolute
+    top: 4px
+    right: 20px
+    &:after 
+      content: "X"
+      display: block
+      width: 15px
+      height: 15px
+      position: absolute
+      z-index: 1
+      color: #babcba
+      font-size: $font_size_Llarge  
+
+  .search_box:not(:valid) ~ .close_icon 
+    display: none
+
+
+
+
+
+  /*老虎機篩選列表*/
+  .filterBar
+    position: relative
+    z-index: 500
+    background-color: #f1f3f2
+    line-height: 30px
+    display: block
+
+    img
+      width: 13px
+      vertical-align: initial    
+    li
+      a
+        padding: 0    
+        
+    .dropdown
+      text-align: left
+      padding-left: 5px
+      z-index: 3
+      .dtitle
+        display: inline-block
+        &:nth-of-type(1)
+          color: #e7851b
+          font-size: $font_size_large
+          // width: 81px
+        
+        &:nth-of-type(2)
+          color: #858b89
+          font-size: $font_size_base
+
+      .ctrl_btn
+        width: 20px
+        &:active, &:focus, &:active:focus
+          outline: none
+        
+    .money_icon
+      button  
+        &:active, &:focus, &:active:focus
+          outline: none   
+
+
+    /*收藏按鈕*/
+    li.Collection
+      a
+        img
+          height: 13px
+        &.active
+          img
+            
+            -moz-box-sizing: border-box
+            box-sizing: border-box
+            background: url(../img/slot/star_icon_s.png) no-repeat
+            background-size: 100% 100%
+            padding-left: 13px
+  
+      span
+        font-size: $font_size_base
+      
+      
+    
+    
+    
+    
+
+/*收藏區塊*/
+ul.Collection
+  // position: absolute
+  z-index: 400
+  background-color: #ffffff
+  display: none
+  padding-top: 18px
+  padding-bottom: 25px
+  
+  .swiper-slide
+    width: auto
+  li
+    // padding: 15px 7px
+    button
+      border-radius: 4px
+      border: solid 2px #d5dad5
+      font-size: $font_size_base
+      padding: 8px 10px
+      color: #848e84
+      &:active, &:focus, &:active:focus
+        outline: none
+    
+  
+  
+
+.dropdown
+  // display: inline
+
+  &.open
+    ul      
+      position: absolute
+      text-align: center
+      z-index: 500
+      min-width: 79px
+      border: 0
+      padding: 0
+      margin: 0
+      background-color: #e5ebe9
+      border-radius: 0
+      -webkit-box-shadow: none
+      box-shadow: none
+      left: -9px
+      font-size: $font_size_base
+      a
+        color: #6b6866
+      
+      li        
+        &.active
+          ul.sub_select
+            display: block
+      
+        
+        ul.sub_select
+          display: none
+          background-color: #ffffff
+          text-align:left
+          top: 0
+          left: 100% 
+          height: auto
+          min-width: 240px
+          width: 90vw
+          min-height: 312px
+          font-size: $font_size_base            
+          li
+            position: relative
+            line-height: 3.27
+            border-bottom: 1px solid #e5ebe9
+            padding-left: 5px
+            text-align: left
+            /*篩選打勾鈕樣式*/
+            label
+              &:nth-of-type(1)
+                font-weight: normal
+              
+              &:nth-of-type(2)
+                position: absolute
+                top: 50%
+                // right: 0
+                transform: translateY(-50%)
+                background-color: #fff
+                border: 1px solid #ccc
+                border-radius: 50%
+                height: 12px
+                width: 12px  
+                left: 80%
+                  
+              
+              &:after
+                border: 1px solid $white_color
+                border-top: none
+                border-right: none
+                content: ""
+                height: 4px
+                left: 1px
+                opacity: 0
+                position: absolute
+                top: 2px
+                transform: rotate(-45deg)
+                width: 8px
+              
+            
+            input[type="checkbox"] 
+              // visibility: hidden
+              display: none
+              &:checked + label
+                background-color: #66bb6a
+                border-color: #66bb6a
+              
+              &:checked + label:after
+                opacity: 1
+              
+            /*篩選打勾鈕*/
+          
+        
+        a
+          padding: 0
+          line-height: 3.27
+
+          /*子清單(遊戲類別)*/
+          &:hover,
+          .active
+            background-color: $white_color
+          
+   
+ 
+  .dropdown-toggle
+    background-color: transparent
+    box-shadow: none
+    
+    &:active
+      outline: 0
+      outline-offset: 0
+    
+ 
+
+
+/*banner*/
+.slot_banner_section
+  margin-top: 80px
+  margin-bottom: 10.5px
+  
+  
+
+.slot_banner
+  .swiper-slide
+    // min-height: 100px
+    img
+      width: 100%
+    
+  
+  .swiper-pagination
+    width: auto
+    right: 14px
+    bottom: 9px
+    left: auto
+    .swiper-pagination-bullet
+      width: 10px
+      height: 10px
+      background-color: #fff
+      opacity: 1
+    
+    .swiper-pagination-bullet-active
+      background-color: #ffde00
+      
+
+#search_result
+  border-bottom: 1px solid $font_gray
+  position: relative
+  padding: 10px 0
+  font-size: $font_size_large
+  margin-bottom: 15px
+  display: none
+  .close_icon 
+    position: absolute
+    right: 10px
+    top: 10px
+
+
+
+
+.game_list  
+  font-size: $font_size_base
+  
+  a.active
+    img            
+      -moz-box-sizing: border-box
+      box-sizing: border-box
+      background: url(../img/slot/star_icon_s.png) no-repeat
+      background-size: 100% 100%
+      padding-left: 12px  
+  a
+    font-size: $font_size_base
+
+  >.container
+    margin-top: -48px
+
+  .game_listcontainer
+    max-width: 570px
+    margin-top: 10px
+    padding: 0
+    
+    .container,.container-fluid
+      margin-top: 0
+      margin-bottom: 0
+    .gabox
+      max-width: 300px
+    .gabox:nth-child(odd)
+      padding-right: 7.5px
+
+    .gabox:nth-child(even)
+      padding-left: 7.5px
+  
+    .game_content
+      img
+        width: 100%    
+    .title
+      background-color: #61af93
+      color: #ffffff
+
+      >div
+        padding-left: 3px
+        img
+          margin-right: 3px
+
+      img
+        width: 13px
+        height: 13px
+        &.favorite
+          vertical-align: top        
+
+
+
+      button
+        background-color: #73bfa4
+        padding: 0
+        border: 0
+        width: 25px
+        height: 25px
+
+      .game_name
+        width: 80.5%
+        overflow: hidden
+        white-space: nowrap
+        text-overflow: ellipsis
+
+
+    .lineHeight
+      line-height: 25px
+
+    .btn_outline
+      width: 45%
+      padding:  6px 3px
+      border-radius: 2px
+      border: 1px solid #b0b8b5
+
+
+    .play_btn
+      padding: 0 3.6% 10px
+      font-size: $font_size_large
+      margin-top: 9px
+      text-align: center 
+      .pull-right
+        background-color: #e79751
+        color: #ffffff      
+    
+      .pull-lrft
+        border: 0
+
+
+
+  .game 
+    -webkit-box-sizing: content-box
+    box-sizing: content-box
+    background-color: #ffffff
+    margin-bottom: 9.5px
+    vertical-align: top 
+    .add_favorite i.active 
+      color: #F02664 
+        
+           
+// for Slot_empty
+
+.slot_empty
+  margin-top: 60px
+  font-size: $font_size_base  
+  .title
+    margin-bottom: 15px
+
+
+.modal-open .filterBar
+  display: none

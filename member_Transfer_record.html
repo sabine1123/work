@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="./lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+
+      <!-- Common css -->
+      <link rel="stylesheet" href="./css/Common.css" type="text/css" media="screen">
+      <link rel="stylesheet" href="./css/popup.css" type="text/css" media="screen">
+
+
+      <!-- <link rel="stylesheet" href="./css/member.css" type="text/css" media="screen">       -->
+      <link rel="stylesheet" href="./css/member_Transfer_record.css" type="text/css" media="screen">      
+      <script src="./lib/jquery/jquery-3.2.1.min.js"></script>
+
+
+      <title>转帐纪录</title>
+
+      <style>
+        tbody>.InfoRow,#loadMore{
+          display: none;
+        }
+        #loadMore{
+          padding-bottom: 25px;
+          margin-top: -10px;
+        }
+      </style>
+  </head>
+
+  <body class="member_Transfer_record">
+
+  <!-- header -->
+  <div class="container">
+    <nav class="navbar-default navbar-fixed-top mem_header" role="navigation">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="navbar-header">
+            <button type="button" class="pull-left" onclick="history.go(-1)">
+                <img style="width:19.5px;height:19.5px" src="img/member/pre_green_icon.png" alt="previous_arrow">
+            </button>
+      
+            <!-- 标题 -->
+            <div class="navbar-brand brand_middle">转帐记录</div>
+            <!-- 客服 -->
+            <a class="navbar-brand pull-right" href=""><img src="./img/icons/service_icon.png" alt="Customer"></a>
+          </div>
+        </div>
+        </div>    
+    </nav>
+  </div>
+
+  <section class="Transfer_record_table">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12">
+        <div class="row">      
+          <table class="table text-nowrap text-center">
+              <thead>
+                <tr>
+                  <th class="">转帐时间</th>
+                  <th class="">转帐金额</th>
+                  <th class="">出入</th>
+                  <th class="">状态</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="space"></tr>
+                <tr class="InfoRow going">
+                  <td class="time">07-28 24:33</td>
+                  <td>28659<span>.00</span></td>
+                  <td class="in_out">
+                    <img style="width:22px;" src="img/member/money_transfer_gray_icon.png" alt="money_transfer_gray_icon">
+                    <img style="width:20px;" src="img/member/transfer_next_icon.png" alt="transfer_next_icon">
+                    <span>PNG</span>
+                  </td>
+                  <td class="status">正在转帐</td>
+                </tr>
+                <tr class="InfoRow successful">
+                  <td class="time">07-28 24:33</td>
+                  <td>35880<span>.00</span></td>
+                  <td class="in_out">
+                      <span>BS</span>
+                      <img style="width:20px;" src="img/member/transfer_next_icon.png" alt="transfer_next_icon">
+                      <img style="width:22px;" src="img/member/money_transfer_gray_icon.png" alt="money_transfer_gray_icon">
+                    </td>
+                  <td class="status">转帐成功</td>
+                </tr>
+                
+                <tr class="InfoRow successful">
+                    <td class="time">07-28 24:33</td>
+                    <td>35880<span>.00</span></td>
+                    <td class="in_out">
+                        <span>AG</span>
+                        <img style="width:20px;" src="img/member/transfer_next_icon.png" alt="transfer_next_icon">
+                        <img style="width:22px;" src="img/member/money_transfer_gray_icon.png" alt="money_transfer_gray_icon">
+                      </td>
+                    <td class="status">转帐成功</td>
+                  </tr>
+                
+                  <tr class="InfoRow going">
+                      <td class="time">07-28 24:33</td>
+                      <td>28659<span>.00</span></td>
+                      <td class="in_out">
+                        <img style="width:22px;" src="img/member/money_transfer_gray_icon.png" alt="money_transfer_gray_icon">
+                        <img style="width:20px;" src="img/member/transfer_next_icon.png" alt="transfer_next_icon">
+                        <span>BBIN</span>
+                      </td>
+                      <td class="status">正在转帐</td>
+                    </tr>
+                
+                  <tr class="InfoRow successful">
+                    <td class="time">07-28 24:33</td>
+                    <td>35880<span>.00</span></td>
+                    <td class="in_out">
+                        <span>BS</span>
+                        <img style="width:20px;" src="img/member/transfer_next_icon.png" alt="transfer_next_icon">
+                        <img style="width:22px;" src="img/member/money_transfer_gray_icon.png" alt="money_transfer_gray_icon">
+                      </td>
+                    <td class="status">转帐成功</td>
+                  </tr>
+                
+                  <tr class="InfoRow successful">
+                    <td class="time">07-28 24:33</td>
+                    <td>35880<span>.00</span></td>
+                    <td class="in_out">
+                        <span>AG</span>
+                        <img style="width:20px;" src="img/member/transfer_next_icon.png" alt="transfer_next_icon">
+                        <img style="width:22px;" src="img/member/money_transfer_gray_icon.png" alt="money_transfer_gray_icon">
+                      </td>
+                    <td class="status">转帐成功</td>
+                  </tr>
+                
+                <tr class="InfoRow going">
+                  <td class="time">07-28 24:33</td>
+                  <td>28659<span>.00</span></td>
+                  <td class="in_out">
+                    <img style="width:22px;" src="img/member/money_transfer_gray_icon.png" alt="money_transfer_gray_icon">
+                    <img style="width:20px;" src="img/member/transfer_next_icon.png" alt="transfer_next_icon">
+                    <span>PNG</span>
+                  </td>
+                  <td class="status">正在转帐</td>
+                </tr>
+                <tr class="InfoRow successful">
+                  <td class="time">07-28 24:33</td>
+                  <td>35880<span>.00</span></td>
+                  <td class="in_out">
+                      <span>BS</span>
+                      <img style="width:20px;" src="img/member/transfer_next_icon.png" alt="transfer_next_icon">
+                      <img style="width:22px;" src="img/member/money_transfer_gray_icon.png" alt="money_transfer_gray_icon">
+                    </td>
+                  <td class="status">转帐成功</td>
+                </tr>
+                
+                <tr class="InfoRow successful">
+                    <td class="time">07-28 24:33</td>
+                    <td>35880<span>.00</span></td>
+                    <td class="in_out">
+                        <span>AG</span>
+                        <img style="width:20px;" src="img/member/transfer_next_icon.png" alt="transfer_next_icon">
+                        <img style="width:22px;" src="img/member/money_transfer_gray_icon.png" alt="money_transfer_gray_icon">
+                      </td>
+                    <td class="status">转帐成功</td>
+                  </tr>
+                
+                  <tr class="InfoRow going">
+                      <td class="time">07-28 24:33</td>
+                      <td>28659<span>.00</span></td>
+                      <td class="in_out">
+                        <img style="width:22px;" src="img/member/money_transfer_gray_icon.png" alt="money_transfer_gray_icon">
+                        <img style="width:20px;" src="img/member/transfer_next_icon.png" alt="transfer_next_icon">
+                        <span>BBIN</span>
+                      </td>
+                      <td class="status">正在转帐</td>
+                    </tr>
+                
+                  <tr class="InfoRow successful">
+                    <td class="time">07-28 24:33</td>
+                    <td>35880<span>.00</span></td>
+                    <td class="in_out">
+                        <span>BS</span>
+                        <img style="width:20px;" src="img/member/transfer_next_icon.png" alt="transfer_next_icon">
+                        <img style="width:22px;" src="img/member/money_transfer_gray_icon.png" alt="money_transfer_gray_icon">
+                      </td>
+                    <td class="status">转帐成功</td>
+                  </tr>
+                
+                  <tr class="InfoRow successful">
+                    <td class="time">07-28 24:33</td>
+                    <td>35880<span>.00</span></td>
+                    <td class="in_out">
+                        <span>AG</span>
+                        <img style="width:20px;" src="img/member/transfer_next_icon.png" alt="transfer_next_icon">
+                        <img style="width:22px;" src="img/member/money_transfer_gray_icon.png" alt="money_transfer_gray_icon">
+                      </td>
+                    <td class="status">转帐成功</td>
+                  </tr>                
+                
+                
+                
+              </tbody>
+            </table>
+
+        </div>
+        </div>
+      </div> 
+
+          <div class="more text-center" id="loadMore">
+            <span>+</span>查看更多
+          </div>          
+        
+    </div>
+  </section>
+   
+
+    <footer class="navbar-default navbar-fixed-bottom text-nowrap">
+    </footer> 
+    
+  
+
+    <script src="./lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="./lib/jquery.validate/jquery.validate.min.js"></script>
+    <script src="./lib/jquery.blockUI.js"></script>
+
+    <script src="js/_component.js"></script>    
+    <script src="js/base.js"></script>    
+    <script src="js/object.js"></script>
+    <script src="js/validate.js"></script>
+    
+    <script>
+
+/*变数区*/
+var SideNav = $(".SideNav");
+var active = "active";
+/*--*/
+
+      $(document).ready(function(){
+
+/*------------- common -------------*/
+        // $('nav').html(el_header);
+        // $('.SideNav').html(el_nav);
+        $('footer').html(el_footer);
+        $('body').after(el_popupBox);
+        baseCtrl();
+
+/*------------- common end-------------*/   
+
+        loadMore();
+
+
+      });
+    </script>
+
+  </body>
+</html>

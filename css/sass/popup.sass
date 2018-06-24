@@ -1,0 +1,264 @@
+@import "layout/_layout.sass"
+//popup-fullpage
+.modal-content
+	border-radius: 0
+	border: 0
+	box-shadow: 0 0
+
+.modal-backdrop.in
+	background-color: #fff
+	z-index: 1010
+	opacity: 1
+
+.popup_full_warp
+	top: 50px
+	background-color: #fff
+	.modal-dialog
+		margin: 0 auto
+
+	.modal-content
+		padding: 20px 12px
+
+		.close_btn
+			position: absolute
+			top: -15px
+			right: 0
+			width: 45px
+			height: 45px
+			img
+				width: 13px		
+
+	.p_header
+		position: relative
+
+		.p_title
+			font-size: $font_size_Llarge
+			color: #6c7270
+			.icon
+				color: $font_icon_gray
+				margin-right: 15px
+
+	.p_body
+		font-size: $font_size_base
+		.sub_box
+			margin-top: 28px
+			.sub_title
+				color: $font_green
+				font-weight: bold
+			.sub_content
+				color: $font_gray
+				line-height: 1.5rem
+				table
+					width: 100%
+					border: 1px solid #fff
+					text-align: center
+					margin-bottom: 10px
+					thead
+						th
+							padding-top: 5px
+							padding-bottom: 5px
+							background-color: #e1e5df
+							border: 1px solid #d6dad4
+							text-align: center
+					tbody
+						td
+							padding-top: 5px
+							padding-bottom: 5px
+							border: 1px solid #d6dad4
+
+
+//login
+.login_popup
+	// display: none
+	// position: fixed
+	// bottom: 50px
+	// background-color: #fff
+	// z-index: 100
+	// margin-bottom: -2px
+	// .popup_mask
+	// 	&:before
+	// 		content: ''
+	// 		display: block
+	// 		width: 100vw
+	// 		height: 100vh
+	// 		background-color: rgba(0,0,0,0.5)
+	+popup_open()
+	bottom: 0
+	z-index: 1200
+	.login
+		padding: 15px 10px 
+		background-color: #fff
+		+popup_common()
+
+		.p_body
+			// font-size: $font_size_base
+			margin-top: percentage(27px/320px)
+			label
+				margin-right: 20px
+				min-width: percentage(65px/320px)
+				img
+					width: 18px
+					margin-right: 9px
+			input
+				width: 65%
+				-webkit-appearance: none;
+				border: none
+			input::placeholder
+				color: #c8d0cf
+			.form_full
+				border-bottom: 1px solid #c8d0cf
+				padding-bottom: 5px
+				position: relative
+				margin-bottom: 25px
+				span.error
+					padding-top: 3px
+					padding-bottom: 0px
+					font-size: $font_size_base
+					line-height: 12px
+					color: $btn_red
+					position: absolute
+					left: 0px
+					bottom: -20px
+
+		.p_footer
+			font-size: $font_size_large
+			.btn_fill_green
+				margin-bottom: 10px
+			.btn_half
+				width: 95%
+			.btn-group-justified:nth-child(2)
+				.btn_empty_gray
+					margin-left: percentage(7px/150px)
+					&:hover,&:active
+						color: #c8d0cf
+
+
+//game
+.game_popup
+	+popup_open()
+	.game		 
+		+popup_common()
+		background-color: #fff
+	.p_body
+		margin-top: 15px
+		.game_img
+			margin-top: 20px
+			.col-xs-3, .col-sm-3
+				padding-left: 5px
+				padding-right: 5px
+
+		.game_history, .game_collect
+			.sub_title
+				color: #3e4443;
+				margin-top: 18px
+				margin-bottom: 10px
+				position: relative
+				&:after
+					content: ''
+					display: block
+					width: percentage(220px/300px)
+					height: 1px
+					border-top: 1px dashed #9eafa9
+					position: absolute
+					top: 8px
+					right: 0
+
+			.game_list
+				width: 24%
+				height: 23px
+				line-height: 23px
+				padding-left: 5px
+				padding-right: 5px
+				text-align: center				
+				border-radius: 20px
+				color: #fff
+				margin-right: percentage(3px/330px)
+
+		.game_history
+			.game_list
+				background-color: #e98e17
+		.game_collect
+			.game_list
+				background-color: #47b569
+
+//game
+.funds_popup
+	+popup_open()
+	.funds		 
+		+popup_common()
+		background-color: #fff
+		.funds_img
+			margin-top: 17px
+			.funds_box
+				width: percentage(96px/320px)
+				&:nth-child(2)
+					margin: auto percentage(15px/320px)
+		.line
+			height: 1px
+			width: 100%
+			background-color: #becbc6
+			margin: 12px auto
+
+		.funds_me
+			// padding-top: 10px
+			.funds_box
+				width: percentage(55px/320px)
+				min-width: 55px
+				min-height: 49px
+				margin-right: percentage(9px/320px)
+				// padding: 7px
+				>.row
+					text-align: center
+					border: 1px dashed #bfbfbf
+					.sub_title
+						margin: 5px auto 
+
+					img
+						margin-top: 5px
+						max-width: percentage(18px/55px)
+
+
+
+.popup_section
+	background-color: rgba(0,0,0,0.9)
+	color: #fff
+	position: relative
+	font-size: $font_size_base
+	border-radius: $popup_radius
+	.popup_header
+		background-color: #292b2a
+		height: 30px
+		line-height: 30px
+		border-top-left-radius: $popup_radius
+		border-top-right-radius: $popup_radius
+	.popup_body		
+		padding-top: 25px
+		padding: 25px 10px 15px
+		border-bottom-left-radius: $popup_radius
+		border-bottom-right-radius: $popup_radius
+		.popup_text
+			line-height: 1.1
+			min-height: 38px
+			&.noBtn
+				min-height: 85px	
+		.doBtn
+			margin-top: 15px
+	.pupup_close
+		background-color: rgba(0,0,0,0.2)
+		// background-color: #fcc
+		padding: 3px
+		border-radius: 50%
+		position: absolute
+		bottom: -35px
+		left: 50%
+		transform: translateX(-50%)
+		img
+			width: 16px
+			border-radius: 50%
+	p
+		margin: 0
+
+
+
+// nav.navbar-fixed-top,footer.navbar-fixed-bottom
+// 	z-index: 1500

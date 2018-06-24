@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="./lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+
+      <!-- Common css -->
+      <link rel="stylesheet" href="./css/Common.css" type="text/css" media="screen">
+      <link rel="stylesheet" href="./css/popup.css" type="text/css" media="screen">
+
+
+      <link rel="stylesheet" href="./css/member_info.css" type="text/css" media="screen">      
+      <script src="./lib/jquery/jquery-3.2.1.min.js"></script>
+
+
+      <title>多乐</title>
+  </head>
+
+  <body>
+
+  <!-- header -->
+  <div class="container">
+    <nav class="navbar-default navbar-fixed-top mem_header" role="navigation">
+        <div class="container-fluid clearfix">
+          <div class="row">
+            <div class="navbar-header">
+              <button type="button" class="pull-left" onclick="history.go(-1)">
+                 <img src="img/member/pre_green_icon.png">          
+              </button>
+        
+              <!-- 标题 -->
+              <div class="navbar-brand brand_middle">填写姓名</div>
+              <!-- 客服 -->
+              <a class="navbar-brand pull-right" href=""><img src="./img/icons/service_icon.png" alt="Customer"></a>
+            </div>
+          </div>
+        </div>    
+      </nav>
+  </div>
+
+
+  <section class="member_infomation_name">
+    <form name="Mname" id="nameF">
+      <ul class="list col-xs-12 col-sm-12 no_pad">      
+        <li class="col-xs-12 col-sm-12 clearfix no_pad">
+          <span class="icon col-xs-1 col-sm-2">
+            <img src="./img/member/name_green_icon.png" alt="">
+          </span>
+          <span class="title col-xs-2 col-sm-3">真实姓名</span>
+          <span class="value col-xs-8 col-sm-5">
+            <input type="text" placeholder="请输入您真实姓名" name="checkName" id="mem_name" >
+          </span>
+        </li>
+        <li>
+          <div class="button_group col-xs-12 col-sm-12">
+          <input type="submit" class="btn btn_fill_green col-xs-12 Sname" value="确认提交">
+          </div>
+        </li>
+      </ul>
+    </form>
+  </section>
+   
+
+  <footer class="navbar-default navbar-fixed-bottom text-nowrap">
+  </footer> 
+  
+
+
+  <script src="./lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+  <script src="./lib/jquery.validate/jquery.validate.min.js"></script>
+  <script src="./lib/jquery.blockUI.js"></script>
+
+  <script src="js/_component.js"></script>    
+  <script src="js/base.js"></script>    
+  <script src="js/object.js"></script>
+  <script src="js/validate.js"></script>
+
+  
+  <script>
+
+    /*变数区*/
+    var SideNav = $(".SideNav");
+    var active = "active";
+    /*--*/
+
+    $(document).ready(function(){
+
+      _setValidate("#nameF");      
+      
+      // $('.Sname').on('click',function(){
+
+      //   var name_value = $('#memName').val();     
+
+      //   //----添加送出姓名  
+      //   _showPop('已提交您的姓名');        
+      // });
+
+
+      /*------------- common -------------*/
+      $('footer').html(el_footer);
+      $('body').after(el_popupBox);
+      baseCtrl();
+
+      /*------------- common end-------------*/
+
+    });//end of doucument.ready
+  </script>
+
+  </body>
+</html>

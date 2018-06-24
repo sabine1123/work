@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="./lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+
+      <!-- for sport -->
+      <link rel="stylesheet" href="./lib/Swiper-master/css/swiper.css">
+
+      <!-- Common css -->
+      <link rel="stylesheet" href="./css/Common.css" type="text/css" media="screen">
+      <link rel="stylesheet" href="./css/popup.css" type="text/css" media="screen">
+
+
+      <link rel="stylesheet" href="./css/sport.css" type="text/css" media="screen">      
+      <script src="./lib/jquery/jquery-3.2.1.min.js"></script>
+
+
+      <title>多乐</title>
+  </head>
+
+  <body>
+
+  <!-- header -->
+  <nav class="navbar-default navbar-fixed-top" role="navigation">
+  </nav>
+
+  <!-- 侧边拦 -->
+  <div class="SideNav text-nowrap">
+  </div>
+  <section>
+    <div class="container-fluid sport">
+          <!-- banner -->
+          <div class="row">
+            <div class="col-xs-12 col-sm-12">
+              <div class="row">
+                <div class="swiper-container sport_banner">
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">                      
+                            <img src="img/sport/banner/images_01.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/sport/banner/images_01.png" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/sport/banner/images_01.png" alt="">
+                        </div>               
+                    </div>
+                    <div class="swiper-pagination index_banner_p"></div>
+                </div><!-- swiper -->
+  
+              </div>
+            </div>
+          </div>
+          
+ 
+          <!-- sport -->
+          <div class="row">
+            <div class=" col-xs-12 col-sm-12">
+              <div class="row">
+                <img src="img/sport/sport_title.png" alt="" class="img-responsive center-block">                
+              </div>
+              <a href="" class="saba"><img src="img/sport/saba_img.png" alt="" class="img-responsive center-block"></a>   
+              <a href=""><img src="img/sport/bbin_img.png" alt="" class="img-responsive center-block"></a>   
+              <div class="row">
+                <img src="img/sport/sport_bg.png" alt="" class="img-responsive center-block">  
+              </div>  
+            </div>
+      
+          </div>
+    </div>
+  </section>
+   
+
+    <footer class="navbar-default navbar-fixed-bottom text-nowrap">
+    </footer> 
+
+    <script src="./lib/Swiper-master/js/swiper.min.js"></script>
+    <script src="./lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="./lib/jquery.validate/jquery.validate.min.js"></script>
+    <script src="./lib/jquery.blockUI.js"></script>
+
+    <script src="js/_component.js"></script>    
+    <script src="js/base.js"></script>    
+    <script src="js/object.js"></script>
+    <script src="js/validate.js"></script>
+    
+    <script>
+      var bannerSwiper = new Swiper ('.sport_banner', {
+        loop: true,
+        pagination: {
+            el: '.index_banner_p'
+            // dynamicBullets: true,
+        },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false
+        },    
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        }
+      });
+
+
+/*变数区*/
+var SideNav = $(".SideNav");
+var active = "active";
+/*--*/
+
+      $(document).ready(function(){
+
+/*------------- common -------------*/
+        $('nav').html(el_header);
+        $('.SideNav').html(el_nav);
+        $('footer').html(el_footer);
+        $('body').after(el_popupBox);
+        baseCtrl();
+
+/*------------- common end-------------*/
+
+
+
+
+
+      });
+    </script>
+
+  </body>
+</html>

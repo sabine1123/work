@@ -1,0 +1,104 @@
+@import "layout/_layout.sass"
+
+.border_right
+	border-right: 1px dotted #e8f0ed
+.border_bottom_min
+	border-bottom: 1px dotted #e8f0ed
+.border_bottom
+	border-bottom: 4px solid #eff5f3
+
+.banner
+	background-color: #387864
+
+.content_wrap
+	margin-top: -48px;
+	font-size: $font_size_base
+	input
+		width: 100%
+		border: none	
+
+.list
+	letter-spacing: 0.6px
+	text-align:left
+	color: #363a39
+
+	li
+		border-bottom: 1px solid #e7eeed
+		// min-height: 52px
+		position: relative
+		margin-bottom: 5px
+
+	li span
+		padding-top: 12px
+		padding-bottom: 12px
+		font-size: $font_size_base
+		line-height: 20px
+		float: left
+	li span.error
+		padding-top: 3px
+		padding-bottom: 0px
+		font-size: $font_size_base
+		line-height: 12px
+		color: $btn_red
+		position: absolute
+		left: 10px
+		bottom: -15px
+
+		// float: left		
+	.icon
+		padding-left: 12px
+		padding-right: 12px
+		text-align: center
+		img
+			width: 18px
+			height: 18px
+		margin-right: 12px;
+	.title
+		padding-left: 0
+		padding-right: 0
+	.value
+		padding-left: 12px
+		padding-right: 0
+
+.validate_group
+	display: block
+	// padding-right: 25px;
+	width: 75px
+	height: 28px
+	float: right !important
+	button
+		border-radius: 12.5px
+
+.no_pad
+	padding-left: 0 !important
+	padding-right: 0 !important
+
+.no_pad_right
+	padding-right: 0 !important
+
+.button_padb
+	padding-bottom: 24px
+.button_padt
+	padding-top: 24px
+.center_child
+	text-align: center
+
+.clearfix:after
+  visibility: hidden
+  display: block
+  font-size: 0
+  content: " "
+  clear: both
+  height: 0
+
+.clearfix 
+	display: inline-block
+
+/* start commented backslash hack \*/
+* html .clearfix 
+	height: 1%
+.clearfix
+	display: block
+/* close commented backslash hack */
+
+

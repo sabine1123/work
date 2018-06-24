@@ -1,0 +1,118 @@
+@import "layout/_layout.sass"
+
+.no_pad
+	padding-left: 0 
+	padding-right: 0 
+
+.no_pad_r
+	padding-right: 0
+
+.font_mark_orange
+	color: #db7224
+
+.font_mark_green
+	color: #1d925f
+
+
+
+
+.dec
+	width: 2px
+	height: 12px
+	background-color: #a2814c
+
+.banner
+	img
+		width: 100%
+.vip
+	margin-top: -50px
+	font-size: $font_size_base
+
+	.group_title
+		border-bottom: 1px solid #e1e7e6
+		padding-top: 10px
+		padding-bottom: 10px
+		padding: 10px 0px 10px 10px
+
+		.vip_icon
+			img
+				width: 32px
+
+		.vip_title
+			padding-right: 0
+			padding-left: 12px
+			.title
+				color: #9d7d40
+				font-size: $font_size_large
+				line-height: 18px
+				font-weight: bold
+			.subtitle
+				color: #95a9a4
+		.vip_icon_next
+			padding-top: 8px
+			img
+				transform: rotateZ(0deg)
+				transition: .5s
+				width: 18px
+			img.active
+				transform: rotateZ(90deg)
+
+	.group_body
+		background-color: #c8bda9
+		.vheader
+			border-bottom: 1px dashed #a89572
+			margin-bottom: 15px
+			img
+				width: 100%
+			// text-align: center
+			// font-size: $font_size_large
+			// padding: 12px 0
+			// color: #fff
+		.vbody
+			color: #70624a
+			text-align: center
+			margin-bottom: 10px
+			.subtitle				
+				padding: 10px 0
+				font-weight: bold
+			.text
+				line-height: 15px
+
+			table
+				width: 100%
+				border: 1px solid #fff
+				text-align: center
+				margin-bottom: 10px
+				thead
+					th
+						padding-top: 8px
+						padding-bottom: 8px
+						background-color: #eddfc6
+						border: 1px solid #ae9d80
+						text-align: center
+				tbody
+					td
+						padding-top: 10px
+						padding-bottom: 10px
+						border: 1px solid #ae9d80
+
+
+.note
+	font-size: $font_size_base
+	.note_title
+		color: #a2814c
+		font-size: $font_size_large
+		font-weight: bold
+		span
+			display: inline-block
+		.dec
+			margin-right: 7px
+	.note_body
+		margin-top: 20px
+		.subtitle
+			margin-bottom: 20px
+			color: #3c3e3d
+		.text
+			line-height: 1.5
+			li
+				margin-bottom: 20px

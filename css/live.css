@@ -1,0 +1,49 @@
+/*18px*/
+/*12px*/
+/*14px*/
+/*14px*/
+/*28px*/
+body {
+  background-color: #f1f3f2;
+}
+.live_banner_section {
+  margin-top: 50px;
+}
+.live_banner img {
+  width: 100%;
+}
+.live_width {
+  width: 100%;
+}
+/*banner*/
+.live_banner .swiper-slide img {
+  width: 100%;
+}
+.live_banner .swiper-pagination {
+  width: auto;
+  right: 14px;
+  bottom: 9px;
+  left: auto;
+}
+.live_banner .swiper-pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  opacity: 1;
+}
+.live_banner .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #ffde00;
+}
+/*banner--*/
+section .live_img {
+  margin-bottom: 10px;
+}
+section.logo {
+  padding-bottom: 55px;
+  margin-bottom: 50px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url(../img/live/live_bg.png) no-repeat;
+  background-size: 100%;
+  background-position: bottom;
+}

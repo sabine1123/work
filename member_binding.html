@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="./lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+
+      <!-- for binding -->
+      <link rel="stylesheet" href="./lib/Swiper-master/css/swiper.css">
+      <!-- Common css -->
+      <link rel="stylesheet" href="./css/Common.css" type="text/css" media="screen">
+      <link rel="stylesheet" href="./css/popup.css" type="text/css" media="screen">
+
+
+      <link rel="stylesheet" href="./css/member_binding.css" type="text/css" media="screen">      
+      <script src="./lib/jquery/jquery-3.2.1.min.js"></script>
+
+
+      <title>多乐</title>
+  </head>
+
+  <body>
+
+    <!-- header -->
+    <div class="container">
+      <nav class="navbar-default navbar-fixed-top mem_header" role="navigation">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="navbar-header">
+              <button type="button" class="pull-left" onclick="history.go(-1)">
+                 <img src="img/member/pre_green_icon.png">          
+              </button>
+        
+              <!-- 标题 -->
+              <div class="navbar-brand brand_middle">我的银行卡</div>
+              <!-- 客服 -->
+              <a class="navbar-brand pull-right" href=""><img src="./img/icons/service_icon.png" alt="Customer"></a>
+            </div>
+          </div>
+          </div>    
+      </nav>
+    </div>
+
+  <section>
+    <div class="binding">
+
+      <a href="./member_binding_add.html">
+        <button class="del">
+          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> 添加
+        </button>
+      </a>
+      <div class="swiper-container banner">
+          <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="header">
+                  <img src="img/member/bank/cmb_logo.png" alt="">
+                  <span class="title">北京银行</span>
+                  <button>解绑</button>
+                </div>
+                <div class="middle">
+                  <span class="title">赵**</span>
+                  <span class="line"></span>
+                  <span class="content">北京市天安门支行</span>
+                </div>
+                <div class="footer">
+                  ************3225
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="header">
+                  <img src="img/member/bank/cmb_logo.png" alt="">
+                  <span class="title">北京银行</span>
+                  <button>解绑</button>
+                </div>
+                <div class="middle">
+                  <span class="title">赵**</span>
+                  <span class="line"></span>
+                  <span class="content">北京市天安门支行</span>
+                </div>
+                <div class="footer">
+                  ************3225
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="header">
+                  <img src="img/member/bank/cmb_logo.png" alt="">
+                  <span class="title">北京银行</span>
+                  <button>解绑</button>
+                </div>
+                <div class="middle">
+                  <span class="title">赵**</span>
+                  <span class="line"></span>
+                  <span class="content">北京市天安门支行</span>
+                </div>
+                <div class="footer">
+                  ************3225
+                </div>
+              </div>               
+          </div>
+
+      </div><!-- swiper -->
+    </div>
+  </section>
+   
+
+    <footer class="navbar-default navbar-fixed-bottom text-nowrap">
+    </footer> 
+    
+  
+
+    <script src="./lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="./lib/Swiper-master/js/swiper.min.js"></script>
+    <script src="./lib/jquery.validate/jquery.validate.min.js"></script>
+    <script src="./lib/jquery.blockUI.js"></script>
+
+    <script src="js/_component.js"></script>    
+    <script src="js/base.js"></script>    
+    <script src="js/object.js"></script>
+    <script src="js/validate.js"></script>    
+    <script>
+      var slotSwiper = new Swiper ('.banner', {
+        slidesPerView: 'auto',
+        spaceBetween: 15
+  
+      });
+
+/*变数区*/
+var SideNav = $(".SideNav");
+var active = "active";
+/*--*/
+
+      $(document).ready(function(){
+
+        $('footer').html(el_footer);
+        $('body').after(el_popupBox);
+        baseCtrl();
+
+      });
+    </script>
+
+  </body>
+</html>

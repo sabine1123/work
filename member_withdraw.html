@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>取款</title>
+        <!-- 最新编译和最佳化的 CSS -->
+        <link rel="stylesheet" href="./lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+        
+        <!-- 选择性布景主题 -->
+        
+        <!-- 选择性 bootstrap -->
+        <!-- <link rel="stylesheet" href="./lib/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css"> -->
+        <link rel="stylesheet" href="./lib/Swiper-master/css/swiper.css">
+        <!-- Main css -->
+        <link rel="stylesheet" href="./lib/animate.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="./css/Common.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="./css/popup.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="./css/member_withdraw.css" type="text/css" media="screen">
+        
+        <!-- 选择性 jquery ui -->
+        <!-- <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
+      
+        <script src="./lib/jquery/jquery-3.2.1.min.js"></script>
+
+        <!-- jquery ui -->
+<!--         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css"> -->
+        <style>
+            .withdraw_money{
+                position: relative;
+            }
+            .withdraw_money span.error{
+                padding-top: 3px;
+                padding-bottom: 0px;
+                font-size: 12px;
+                line-height: 12px;
+                color: #f16c6c;
+                position: absolute;
+                left: 0px;
+                bottom: -15px;
+            }
+            .withdraw .withdraw_content .SelectBank{
+                margin-top: 25px
+            }
+        </style>
+    </head>
+<body class="withdraw">
+    <nav class="navbar-default navbar-fixed-top" role="navigation">      
+        <div class="container-fluid">
+            <div class="row">
+                <div class="navbar-header">
+                    <!-- 上一页 -->
+                    <button type="button" class="navbar-toggle pull-left" onclick="history.go(-1)">
+                        <img style="width:19.5px;height:19.5px" src="img/member/pre_green_icon.png" alt="previous_arrow">
+                    </button>
+                    <a class="navbar-brand pull-right" href=""><img src="./img/icons/service_icon.png" alt="Customer"></a>
+                    <div class="withdraw_title text-nowrap">
+                        
+                        
+                        <ul class="col-xs-4"> 
+                            <li><a href="member_deposit.html">存款</a></li>
+                        </ul>
+                        <ul class="col-xs-4">
+                            <li class="active"><a href="member_withdraw.html">取款</a></li>
+                        </ul>
+                        <ul class="col-xs-4">
+                            <li><a href="member_Transfer.html">转帐</a></li> 
+                        </ul>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<!-- header -->
+<section class="header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 meter">
+                <div class="balance_title balance_padding text-center">
+                    <p class="balance">
+                        <img style="width:20px;height:20px;" src="img/member/deposit_money_icon.png" alt="deposit_money_icon">钱包余额
+                    </p>                    
+                    <p class="balance_num"><span>2288</span><span>.00</span></p> 
+                </div>
+                
+            </div>
+        </div>
+      </div>
+  </section>
+  
+<section class="withdraw_content">
+        <div class="container">
+            <form action="" id="withdrawF">
+                <div class="form-group withdraw_money clearfix">           
+                                                 
+                        <label for="" class="pull-left">
+                            <span>¥</span>
+                            <span class="withdraw_num">取款金额</span>
+                        </label>
+                        <input class="pull-right" type="text" name="checkisNum" placeholder="最小取款100元">
+                                                                                  
+                </div>
+
+                <div class="SelectBank">
+                    <label for="" class="">                        
+                        <span>选择取款银行:</span>
+                    </label>
+                </div>
+
+                <div class="swiper-container banner">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="header">
+                            <img src="img/member/bank/取款_07.png" alt="">
+                            <span class="title">北京银行</span>
+                            
+                            </div>
+                            <div class="middle">
+                            <span class="title">赵**</span>
+                            <span class="line"></span>
+                            <span class="content">北京市天安门支行</span>
+                            </div>
+                            <div class="footer">
+                            ************3225
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="header">
+                            <img src="img/member/bank/取款_07.png" alt="">
+                            <span class="title">北京银行</span>
+                            
+                            </div>
+                            <div class="middle">
+                            <span class="title">赵**</span>
+                            <span class="line"></span>
+                            <span class="content">北京市天安门支行</span>
+                            </div>
+                            <div class="footer">
+                            ************3225
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="header">
+                            <img src="img/member/bank/取款_07.png" alt="">
+                            <span class="title">北京银行</span>
+                            </div>
+                            <div class="middle">
+                            <span class="title">赵**</span>
+                            <span class="line"></span>
+                            <span class="content">北京市天安门支行</span>
+                            </div>
+                            <div class="footer">
+                            ************3225
+                            </div>
+                        </div>               
+                    </div>
+            
+                </div><!-- swiper -->
+                <div class="withdraw_footer">
+                    <div class="btn-group btn-group-justified">
+                        <div class="btn-group">
+                        <a href="javascript:;" class="btn btn-default btn_fill_green" role="button">确认提交</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        
+
+        
+
+</section>
+
+ <footer class="navbar-default navbar-fixed-bottom text-nowrap">
+    
+</footer>         
+
+  
+    <script src="./lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="./lib/jquery.validate/jquery.validate.min.js"></script>
+    <script src="./lib/jquery.blockUI.js"></script>
+    <script src="./lib/Swiper-master/js/swiper.min.js"></script>
+
+    <script src="js/_component.js"></script>    
+    <script src="js/base.js"></script>    
+    <script src="js/object.js"></script>
+    <script src="js/validate.js"></script>
+
+
+        <script type="text/javascript">
+        
+        var SideNav = $(".SideNav");
+        var active = "active";
+        var hideDelay = true;
+
+
+    
+    function addListenerToBanklis () {
+        $("#selectBankTab ul li").on("click", function (e) {
+            var title = $(this).find('.title').text();
+            var amount = $(this).find('.amount').text();
+            var balance_value =  $(this).attr('data-balance');
+          
+        
+          $('#choose_balance_close_btn').trigger('click');
+        //   var balance_num_el = $('.balance_num').html();
+        //   $(balance_num_el).appendTo(".choose_balance_button_title");
+        //   $('.choose_balance_button_title')
+        //   $('.choose_balance_button_title').html(title + amount);
+        //   $('.choose_balance_button_title').attr('data-balance', balance_value);
+        });
+      }
+      
+$(document).ready(function () {
+
+    setWithdrawValid();
+    // initial
+    var slotSwiper = new Swiper ('.banner', {
+        slidesPerView: 'auto',
+        spaceBetween: 15
+  
+      });
+    addListenerToBanklis();
+    // console.log( $('.balance_num').text() );
+    var r = $('.balance_num').html();
+    var e = $('.choose_balance_button_title').html()
+
+    // $('.balance_num').append( $('.choose_balance_button_title').children() );
+
+    // $('.choose_balance_button_title').append( $('.balance_num').children() )
+    
+    $('footer').html(el_footer);
+    $('body').after(el_popupBox);
+    baseCtrl();
+    /**/
+    // for close the #choose_bank animation
+    $('#choose_balance').on('hide.bs.modal',function(e){
+            
+        if(hideDelay){
+          $('#choose_balance .modal-content').removeClass('animated fadeInRight').addClass('animated fadeOutRight');
+          hideDelay = false;
+           setTimeout(function(){
+             $('#choose_balance').modal('hide');
+             $('#choose_balance .modal-content').removeClass('animated fadeOutRight').addClass('animated fadeInRight');
+           },700);
+          return false;
+        }
+        hideDelay = true;
+        return true;
+      });
+    
+    $('.swiper-slide').on('click',function(){
+      var swiper_slide = $('.swiper-slide');
+      $(swiper_slide).removeClass(active);
+      $(this).addClass(active);
+    });
+
+
+
+    
+});
+        </script>
+
+
+</body>
+</html>
